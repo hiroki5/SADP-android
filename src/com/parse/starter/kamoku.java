@@ -21,7 +21,7 @@ public class kamoku extends Activity {
 		setContentView(absoluteLayout);
 		
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
-        // アイテムを追加します
+        // アイテム
         adapter.add("情報システム設計論Ⅰ");
         adapter.add("情報システム設計論Ⅱ");
         adapter.add("情報社会論");
