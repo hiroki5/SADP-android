@@ -12,9 +12,19 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+/**
+ * 科目クラス
+ * このクラスで科目情報を保有する
+ * @author kitabayashi
+ *
+ */
 public class kamoku extends Activity {
+	
+	/**
+	 * onCreateハンドラ
+	 */
 	@Override
-  public void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		AbsoluteLayout absoluteLayout = new AbsoluteLayout(this); 
 		absoluteLayout.setBackgroundColor(Color.BLACK);
@@ -24,7 +34,7 @@ public class kamoku extends Activity {
         // アイテム
         adapter.add("情報システム設計論Ⅰ");
         adapter.add("情報システム設計論Ⅱ");
-        adapter.add("情報社会論");
+        adapter.add("情報システム分析論");
         ListView listView = new ListView(this);
         // アダプターを設定します
         listView.setAdapter(adapter);
@@ -40,14 +50,18 @@ public class kamoku extends Activity {
                 // クリックされたアイテムを取得します
                 String item = (String) listView.getItemAtPosition(position);
                 
-                Intent intent1 = new Intent(kamoku.this, query2.class);
-                Intent intent2 = new Intent(kamoku.this, lecture1.class);
+                Intent intent1 = new Intent(kamoku.this, lecture1.class);
+                Intent intent2 = new Intent(kamoku.this, lecture2.class);
+                Intent intent3 = new Intent(kamoku.this, lecture3.class);
         		//startActivityForResult(intent, 1);　　
-                if(item == "情報システム設計論Ⅱ"){
+                if(item == "情報システム設計論Ⅰ"){
         		startActivity(intent1);
                 }
-                else if(item == "情報システム設計論Ⅰ"){
+                else if(item == "情報システム設計論Ⅱ"){
             		startActivity(intent2);
+                }
+                else if(item == "情報システム分析論"){
+            		startActivity(intent3);
                 }
         		//finish();
                 
