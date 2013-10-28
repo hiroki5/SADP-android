@@ -52,7 +52,7 @@ public class lecture1 extends Activity {
 		
 		Button btn = new Button(this);
         btn.setText("–ß‚é");
-        absoluteLayout.addView(btn, new AbsoluteLayout.LayoutParams(150,150, 300, 200));
+        absoluteLayout.addView(btn, new AbsoluteLayout.LayoutParams(150,150, 280, 200));
 		
 		//Button btn = (Button)findViewById(R.id.button02);
 		btn.setOnClickListener(new View.OnClickListener() {
