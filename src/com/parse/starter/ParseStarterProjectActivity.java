@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AbsoluteLayout;
 import android.widget.Button;
 import android.widget.TextView;
@@ -17,15 +18,28 @@ import com.parse.Parse;
 import com.parse.ParseAnalytics;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.parse.starter.courses.CourseListActivity;
 
-public class ParseStarterProjectActivity extends Activity {
+public class ParseStarterProjectActivity extends Activity implements OnClickListener {
+	
+	// TODO Use xml to generate id in order to avoid corruption of Ids.
+	private static final int START_COURSE_LIST_ACTIVITY = 1; 
+	
 	/** Called when the activity is first created. */
 	public void onCreate(Bundle savedInstanceState) {
+		// TODO Remove unused codes.
+		
 		super.onCreate(savedInstanceState);
 		Log.d("Debug:", "ParseStarterProjectApplication onCreate");
 		//setContentView(R.layout.main);
         AbsoluteLayout absoluteLayout = new AbsoluteLayout(this); 
         setContentView(absoluteLayout);
+        
+        Button button = new Button(this);
+        button.setId(START_COURSE_LIST_ACTIVITY);
+        button.setText("Start CourseListActivity");
+        button.setOnClickListener(this);
+        absoluteLayout.addView(button);
         
         Button btn = new Button(this);
         btn.setText("ŽžŠÔŠ„");
@@ -84,5 +98,14 @@ public class ParseStarterProjectActivity extends Activity {
 		ParseAnalytics.trackAppOpened(getIntent());
 		*/
 		
+	}
+
+	@Override
+	public void onClick(View view) {
+		switch(view.getId()) {
+			case START_COURSE_LIST_ACTIVITY:
+				Intent intent = new Intent(this, CourseListActivity.class);
+				startActivity(intent);
+		}
 	}
 }
