@@ -9,8 +9,7 @@ import android.widget.Button;
 import android.widget.GridView;
 
 public class time extends Activity {
-	private static final String[] WORDS = { "Œ", "‰Î", "…", "–Ø", "‹à", "î•ñƒVƒXƒeƒ€İŒv˜_‡T", "","Šë‹@ŠÇ—“Á˜_","","","","î•ñƒVƒXƒeƒ€İŒv˜_‡T","î•ñĞ‰ï˜_","î•ñƒVƒXƒeƒ€•ªÍ˜_","î•ñŠw“W–]1","","î•ñƒVƒXƒeƒ€İŒv˜_‡T","–hĞî•ñ“Á˜_","î•ñƒVƒXƒeƒ€İŒv˜_2","Ğ‰ïî•ñŠw“ÁêŒ¤‹†","","î•ñƒVƒXƒeƒ€•ªÍ˜_","","î•ñƒVƒXƒeƒ€İŒv˜_‡U","Ğ‰ïî•ñŠw“ÁêŒ¤‹†","","ƒCƒ“ƒtƒHƒ[ƒVƒ‡ƒ“ƒfƒUƒCƒ“˜_","","î•ñƒVƒXƒeƒ€İŒv˜_‡U","Ğ‰ïî•ñŠw“ÁêŒ¤‹†" };
-	
+	private static final String[] WORDS = {  "æœˆ", "ç«", "æ°´", "æœ¨", "é‡‘", "æƒ…å ±ã‚·ã‚¹ãƒ†ãƒ è¨­è¨ˆè«–â… ", "","å±æ©Ÿç®¡ç†ç‰¹è«–","","","","æƒ…å ±ã‚·ã‚¹ãƒ†ãƒ è¨­è¨ˆè«–â… ","æƒ…å ±ç¤¾ä¼šè«–","æƒ…å ±ã‚·ã‚¹ãƒ†ãƒ åˆ†æè«–","æƒ…å ±å­¦å±•æœ›1","","æƒ…å ±ã‚·ã‚¹ãƒ†ãƒ è¨­è¨ˆè«–â… ","é˜²ç½æƒ…å ±ç‰¹è«–","æƒ…å ±ã‚·ã‚¹ãƒ†ãƒ è¨­è¨ˆè«–2","ç¤¾ä¼šæƒ…å ±å­¦ç‰¹æ®Šç ”ç©¶","","æƒ…å ±ã‚·ã‚¹ãƒ†ãƒ åˆ†æè«–","","æƒ…å ±ã‚·ã‚¹ãƒ†ãƒ è¨­è¨ˆè«–â…¡","ç¤¾ä¼šæƒ…å ±å­¦ç‰¹æ®Šç ”ç©¶","","ã‚¤ãƒ³ãƒ•ã‚©ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ãƒ‡ã‚¶ã‚¤ãƒ³è«–","","æƒ…å ±ã‚·ã‚¹ãƒ†ãƒ è¨­è¨ˆè«–â…¡","ç¤¾ä¼šæƒ…å ±å­¦ç‰¹æ®Šç ”ç©¶" };	
 	@Override
   public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -21,7 +20,7 @@ public class time extends Activity {
 		setContentView(absoluteLayout);
 
 		Button btn = new Button(this);
-        btn.setText("–ß‚é");
+        btn.setText("ï¿½ß‚ï¿½");
         absoluteLayout.addView(btn, new AbsoluteLayout.LayoutParams(150,150, 300, 200));
 		
 		//Button btn = (Button)findViewById(R.id.button02);
