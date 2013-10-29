@@ -42,7 +42,7 @@ public class ParseStarterProjectActivity extends Activity implements OnClickList
         absoluteLayout.addView(button);
         
         Button btn = new Button(this);
-        btn.setText("ŠÔŠ„");
+        btn.setText("æ™‚é–“å‰²");
         btn.setOnClickListener(new View.OnClickListener() {
         	@Override
         	public void onClick(View v) {
@@ -54,7 +54,7 @@ public class ParseStarterProjectActivity extends Activity implements OnClickList
         absoluteLayout.addView(btn, new AbsoluteLayout.LayoutParams(350,150, 180, 200));
         
         Button btn2 = new Button(this);
-        btn2.setText("ö‹Æˆê——");
+        btn2.setText("è¬›ç¾©ä¸€è¦§");
         btn2.setOnClickListener(new View.OnClickListener() {
         	@Override
         	public void onClick(View v) {
@@ -77,22 +77,22 @@ public class ParseStarterProjectActivity extends Activity implements OnClickList
 		//String names=("k5");
 		query.whereEqualTo("foo", "k5");
 		//query.whereContainedIn("foo", Arrays.asList(names));
-		int score = 10000; // ‚±‚±‚Ì’l‚Í“KØ‚Éİ’è
+		int score = 10000; // ï¿½ï¿½ï¿½ï¿½ï¿½Ì’lï¿½Í“Kï¿½Ø‚Éİ’ï¿½
 		try{
-			System.out.println("ƒAƒNƒZƒX");
+			System.out.println("ï¿½Aï¿½Nï¿½Zï¿½X");
 			List<ParseObject> objects = query.find();
 			ParseObject object = objects.get(0);
 			score = object.getInt("score");
 		}catch(Exception e){
-			// parse‚ÌƒAƒNƒZƒX‚É¸”s‚µ‚½‚Æ‚«‚Ìˆ—
-			System.out.println("ƒAƒNƒZƒX¸”s");
+			// parseï¿½ÌƒAï¿½Nï¿½Zï¿½Xï¿½Éï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½Ìï¿½ï¿½ï¿½
+			System.out.println("ï¿½Aï¿½Nï¿½Zï¿½Xï¿½ï¿½ï¿½s");
 		}
 		
 		
         TextView textView = new TextView(getApplicationContext());
-        // ƒeƒLƒXƒgƒrƒ…[‚ÌƒeƒLƒXƒg‚ğİ’è
+        // ï¿½eï¿½Lï¿½Xï¿½gï¿½rï¿½ï¿½ï¿½[ï¿½Ìƒeï¿½Lï¿½Xï¿½gï¿½ï¿½İ’ï¿½
         textView.setText(String.valueOf(score));
-        //‰æ–Ê‚É•\¦
+        //ï¿½ï¿½Ê‚É•\ï¿½ï¿½
         absoluteLayout.addView(textView);
 
 		ParseAnalytics.trackAppOpened(getIntent());

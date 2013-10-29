@@ -16,15 +16,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 /**
- * ‰È–ÚƒNƒ‰ƒX
- * ‚±‚ÌƒNƒ‰ƒX‚Å‰È–Úî•ñ‚ğ•Û—L‚·‚é
+ * ï¿½È–ÚƒNï¿½ï¿½ï¿½X
+ * ï¿½ï¿½ï¿½ÌƒNï¿½ï¿½ï¿½Xï¿½Å‰È–Úï¿½ï¿½ï¿½Û—Lï¿½ï¿½ï¿½ï¿½
  * @author kitabayashi
  *
  */
 public class kamoku extends Activity {
 	
 	/**
-	 * onCreateƒnƒ“ƒhƒ‰
+	 * onCreateï¿½nï¿½ï¿½ï¿½hï¿½ï¿½
 	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -38,13 +38,13 @@ public class kamoku extends Activity {
 		
 		CharSequence[] data = new CharSequence[5];
 		
-		data[0] = Html.fromHtml(("<font color=\"Red\">Œ¤‹†w“±‰È–Ú</font>"));
-		data[1] = "Ğ‰ïî•ñŠw“ÁêŒ¤‹†1";
-		data[2] = "Ğ‰ïî•ñŠw“ÁêŒ¤‹†2";
-		data[3] = "î•ñƒVƒXƒeƒ€İŒv˜_‡T";
-		data[4] = "î•ñƒVƒXƒeƒ€İŒv˜_‡U";
+		data[0] = Html.fromHtml(("<font color=\"Red\">ï¿½ï¿½ï¿½ï¿½ï¿½wï¿½ï¿½ï¿½È–ï¿½</font>"));
+		data[1] = "ï¿½Ğ‰ï¿½ï¿½ï¿½wï¿½ï¿½ï¿½êŒ¤ï¿½ï¿½1";
+		data[2] = "ï¿½Ğ‰ï¿½ï¿½ï¿½wï¿½ï¿½ï¿½êŒ¤ï¿½ï¿½2";
+		data[3] = "ï¿½ï¿½ï¿½Vï¿½Xï¿½eï¿½ï¿½ï¿½İŒvï¿½_ï¿½T";
+		data[4] = "ï¿½ï¿½ï¿½Vï¿½Xï¿½eï¿½ï¿½ï¿½İŒvï¿½_ï¿½U";
 		
-		Spanned s= Html.fromHtml("<font color='#0000ff'>Â</font>");
+		Spanned s= Html.fromHtml("<font color='#0000ff'>ï¿½ï¿½</font>");
 		*/
 		
 	    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
@@ -53,13 +53,13 @@ public class kamoku extends Activity {
 		//ArrayAdapter<Spanned> adapter = new ArrayAdapter<Spanned>(this, android.R.layout.simple_list_item_1);
 		
 		//adapter.add(s);
-		// ƒAƒCƒeƒ€
+		// ï¿½Aï¿½Cï¿½eï¿½ï¿½
 		/*
 		TextView textView1 = new TextView(this);
-        // ƒeƒLƒXƒgƒrƒ…[‚ÌƒeƒLƒXƒg‚ğİ’è
+        // ï¿½eï¿½Lï¿½Xï¿½gï¿½rï¿½ï¿½ï¿½[ï¿½Ìƒeï¿½Lï¿½Xï¿½gï¿½ï¿½İ’ï¿½
         textView1.setText("12345");
         TextView textView2 = new TextView(this);
-        // ƒeƒLƒXƒgƒrƒ…[‚ÌƒeƒLƒXƒg‚ğİ’è
+        // ï¿½eï¿½Lï¿½Xï¿½gï¿½rï¿½ï¿½ï¿½[ï¿½Ìƒeï¿½Lï¿½Xï¿½gï¿½ï¿½İ’ï¿½
         textView2.setText("123");
         //adapter.add(textView1);
         //adapter.add(textView2);
@@ -68,77 +68,77 @@ public class kamoku extends Activity {
         adapter.add(textView1);
         */
 		
-	    adapter.add("Œ¤‹†w“±‰È–Ú");
-		adapter.add("Ğ‰ïî•ñŠw“ÁêŒ¤‹†1");
-        adapter.add("Ğ‰ïî•ñŠw“ÁêŒ¤‹†2");
-        adapter.add("Œ¤‹†‰È‹¤’Ê‰È–Ú");
-        adapter.add("î•ñŠw“W–]1");
-        adapter.add("î•ñŠw“W–]2");
-        adapter.add("î•ñŠw“W–]3");
-        adapter.add("î•ñŠw“W–]4");
-        adapter.add("î•ñŠw“W–]5");
-        adapter.add("ŒvZ‹@‰ÈŠw“ü–å");
-        adapter.add("ŒvZ‰ÈŠw‰‰KA");
-        adapter.add("î•ñ‚Æ’mà");
-        adapter.add("ƒƒfƒBƒAî•ñˆ—˜_");
-        adapter.add("ƒCƒmƒx[ƒVƒ‡ƒ“‚Æî•ñ");
-        adapter.add("î•ñ•ªÍŠÇ—˜_");
-        adapter.add("î•ñ•ªÍŠÇ—˜_");
-        adapter.add("î•ñ•ªÍŠÇ—‰‰K");
-        adapter.add("î•ñ•ªÍŠÇ—‰‰K");
-        adapter.add("î•ñŠw‚É‚¨‚¯‚éĞ‰ïvŒ£");
-        adapter.add("î•ñŠw‚É‚¨‚¯‚éƒCƒ“ƒ^[ƒ“ƒVƒbƒv");
-        adapter.add("êUŠJİ‰È–Ú");
-        adapter.add("@|êUŠî‘b‰È–Ú");
-        adapter.add("î•ñĞ‰ï˜_");
-        adapter.add("î•ñƒVƒXƒeƒ€İŒv˜_‡T");
-        adapter.add("î•ñƒVƒXƒeƒ€İŒv˜_‡U");
-        adapter.add("î•ñƒVƒXƒeƒ€•ªÍ˜_");
-        adapter.add("@|‘I‘ğ‰‰KEƒZƒ~ƒi[");
-        adapter.add("Ğ‰ïî•ñƒ‚ƒfƒ‹ƒZƒ~ƒi[");
-        adapter.add("Ğ‰ïî•ñƒlƒbƒgƒ[ƒNƒZƒ~ƒi[");
-        adapter.add("¶•¨Œ—î•ñŠwƒZƒ~ƒi[");
-        adapter.add("–hĞî•ñŠwƒZƒ~ƒi[1");
-        adapter.add("–hĞî•ñŠwƒZƒ~ƒi[2");
-        adapter.add("–hĞî•ñŠwƒZƒ~ƒi[3");
-        adapter.add("ˆã—Ãî•ñŠw‰‰K");
-        adapter.add("î•ñ‹³ˆçŠwƒZƒ~ƒi[");
-        adapter.add("@|êUê–å‰È–Ú");
-        adapter.add("•ªUî•ñƒVƒXƒeƒ€");
-        adapter.add("ƒ}ƒ‹ƒ`ƒG[ƒWƒFƒ“ƒgƒVƒXƒeƒ€");
-        adapter.add("î•ñ‘gD‰»EŒŸõ˜_");
-        adapter.add("¶•¨Œ—î•ñŠw");
-        adapter.add("–hĞî•ñ“Á˜_");
-        adapter.add("Šë‹@ŠÇ—“Á˜_");
-        adapter.add("ˆã—Ãî•ñŠw");
-        adapter.add("ƒrƒWƒlƒXî•ñ˜_");
-        adapter.add("î•ñ‹³ˆç˜_");
-        adapter.add("î•ñƒ‚ƒfƒŠƒ“ƒO˜_");
-        adapter.add("ˆÃ†‚Æî•ñĞ‰ï");
-        adapter.add("ƒT[ƒrƒXƒ‚ƒfƒŠƒ“ƒO˜_");
-        adapter.add("ƒfƒUƒCƒ“Šw‰È–Ú");
-        adapter.add("ƒCƒ“ƒtƒHƒ[ƒVƒ‡ƒ“ƒfƒUƒCƒ“˜_");
-        adapter.add("ƒtƒB[ƒ‹ƒh•ªÍ–@");
-        adapter.add("–â‘è”­Œ©Œ^/‰ğŒˆŒ^ŠwK1");
-        adapter.add("–â‘è”­Œ©Œ^/‰ğŒˆŒ^ŠwK2");
-        adapter.add("í—ª“IƒRƒ~ƒ…ƒjƒP[ƒVƒ‡ƒ“ƒZƒ~ƒi[(“ú–{Œê)");
-        adapter.add("í—ª“IƒRƒ~ƒ…ƒjƒP[ƒVƒ‡ƒ“ƒZƒ~ƒi[(‰pŒê)");
-        adapter.add("î•ñŠw‰‰K‡T");
-        adapter.add("î•ñŠw‰‰K‡U");
-        adapter.add("ƒvƒƒWƒFƒNƒg‰È–Ú");
-        adapter.add("M†ˆ—ƒZƒ~ƒi[");
-        adapter.add("ŒvZ‰ÈŠw‰‰KB");
-        adapter.add("ƒrƒbƒOƒf[ƒ^‚ÌŒvZ‰ÈŠw");
+	    adapter.add("â—ç ”ç©¶æŒ‡å°ç§‘ç›®");
+		adapter.add("ç¤¾ä¼šæƒ…å ±å­¦ç‰¹æ®Šç ”ç©¶1");
+        adapter.add("ç¤¾ä¼šæƒ…å ±å­¦ç‰¹æ®Šç ”ç©¶2");
+        adapter.add("â—ç ”ç©¶ç§‘å…±é€šç§‘ç›®");
+        adapter.add("æƒ…å ±å­¦å±•æœ›1");
+        adapter.add("æƒ…å ±å­¦å±•æœ›2");
+        adapter.add("æƒ…å ±å­¦å±•æœ›3");
+        adapter.add("æƒ…å ±å­¦å±•æœ›4");
+        adapter.add("æƒ…å ±å­¦å±•æœ›5");
+        adapter.add("è¨ˆç®—ç§‘å­¦å…¥é–€");
+        adapter.add("è¨ˆç®—ç§‘å­¦æ¼”ç¿’A");
+        adapter.add("æƒ…å ±ã¨çŸ¥è²¡");
+        adapter.add("ãƒ¡ãƒ‡ã‚£ã‚¢æƒ…å ±å‡¦ç†è«–");
+        adapter.add("ã‚¤ãƒãƒ™ãƒ¼ã‚·ãƒ§ãƒ³ã¨æƒ…å ±");
+        adapter.add("æƒ…å ±åˆ†æãƒ»ç®¡ç†è«–");
+        adapter.add("æƒ…å ±åˆ†æãƒ»ç®¡ç†è«–");
+        adapter.add("æƒ…å ±åˆ†æãƒ»ç®¡ç†æ¼”ç¿’");
+        adapter.add("æƒ…å ±åˆ†æãƒ»ç®¡ç†æ¼”ç¿’");
+        adapter.add("æƒ…å ±å­¦ã«ã‚ˆã‚‹ç¤¾ä¼šè²¢çŒ®");
+        adapter.add("æƒ…å ±å­¦ã«ãŠã‘ã‚‹ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ³ã‚·ãƒƒãƒ—");
+        adapter.add("â—å°‚æ”»é–‹è¨­ç§‘ç›®");
+        adapter.add("ã€€âˆ’å°‚æ”»åŸºç¤ç§‘ç›®");
+        adapter.add("æƒ…å ±ç¤¾ä¼šè«–");
+        adapter.add("æƒ…å ±ã‚·ã‚¹ãƒ†ãƒ è¨­è¨ˆè«–â… ");
+        adapter.add("æƒ…å ±ã‚·ã‚¹ãƒ†ãƒ è¨­è¨ˆè«–â…¡");
+        adapter.add("æƒ…å ±ã‚·ã‚¹ãƒ†ãƒ åˆ†æè«–");
+        adapter.add("ã€€âˆ’é¸æŠæ¼”ç¿’ãƒ»ã‚»ãƒŸãƒŠãƒ¼");
+        adapter.add("ç¤¾ä¼šæƒ…å ±ãƒ¢ãƒ‡ãƒ«ã‚»ãƒŸãƒŠãƒ¼");
+        adapter.add("ç¤¾ä¼šæƒ…å ±ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯ã‚»ãƒŸãƒŠãƒ¼");
+        adapter.add("ç”Ÿç‰©åœæƒ…å ±å­¦ã‚»ãƒŸãƒŠãƒ¼");
+        adapter.add("é˜²ç½æƒ…å ±å­¦ã‚»ãƒŸãƒŠãƒ¼1");
+        adapter.add("é˜²ç½æƒ…å ±å­¦ã‚»ãƒŸãƒŠãƒ¼2");
+        adapter.add("é˜²ç½æƒ…å ±å­¦ã‚»ãƒŸãƒŠãƒ¼3");
+        adapter.add("åŒ»ç™‚æƒ…å ±å­¦æ¼”ç¿’");
+        adapter.add("æƒ…å ±æ•™è‚²å­¦ã‚»ãƒŸãƒŠãƒ¼");
+        adapter.add("ã€€âˆ’å°‚æ”»å°‚é–€ç§‘ç›®");
+        adapter.add("åˆ†æ•£æƒ…å ±ã‚·ã‚¹ãƒ†ãƒ ");
+        adapter.add("ãƒãƒ«ãƒã‚¨ãƒ¼ã‚¸ã‚§ãƒ³ãƒˆã‚·ã‚¹ãƒ†ãƒ ");
+        adapter.add("æƒ…å ±çµ„ç¹”åŒ–ãƒ»æ¤œç´¢è«–");
+        adapter.add("ç”Ÿç‰©åœæƒ…å ±å­¦");
+        adapter.add("é˜²ç½æƒ…å ±ç‰¹è«–");
+        adapter.add("å±æ©Ÿç®¡ç†ç‰¹è«–");
+        adapter.add("åŒ»ç™‚æƒ…å ±å­¦");
+        adapter.add("ãƒ“ã‚¸ãƒã‚¹æƒ…å ±è«–");
+        adapter.add("æƒ…å ±æ•™è‚²è«–");
+        adapter.add("æƒ…å ±ãƒ¢ãƒ‡ãƒªãƒ³ã‚°è«–");
+        adapter.add("æš—å·ã¨æƒ…å ±ç¤¾ä¼š");
+        adapter.add("ã‚µãƒ¼ãƒ“ã‚¹ãƒ¢ãƒ‡ãƒªãƒ³ã‚°è«–");
+        adapter.add("â—ãƒ‡ã‚¶ã‚¤ãƒ³å­¦ç§‘ç›®");
+        adapter.add("ã‚¤ãƒ³ãƒ•ã‚©ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ãƒ‡ã‚¶ã‚¤ãƒ³è«–");
+        adapter.add("ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰åˆ†ææ³•");
+        adapter.add("å•é¡Œç™ºè¦‹å‹/è§£æ±ºå‹å­¦ç¿’1");
+        adapter.add("å•é¡Œç™ºè¦‹å‹/è§£æ±ºå‹å­¦ç¿’2");
+        adapter.add("æˆ¦ç•¥ã‚³ãƒŸãƒ¥ãƒ‹ã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚»ãƒŸãƒŠãƒ¼(æ—¥æœ¬èª)");
+        adapter.add("æˆ¦ç•¥ã‚³ãƒŸãƒ¥ãƒ‹ã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚»ãƒŸãƒŠãƒ¼(æ—¥æœ¬èª)");
+        adapter.add("æƒ…å ±å­¦æ¼”ç¿’â… ");
+        adapter.add("æƒ…å ±å­¦æ¼”ç¿’â…¡");
+        adapter.add("â—ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆç§‘ç›®");
+        adapter.add("ä¿¡å·å‡¦ç†ã‚»ãƒŸãƒŠãƒ¼");
+        adapter.add("è¨ˆç®—ç§‘å­¦æ¼”ç¿’B");
+        adapter.add("ãƒ“ãƒƒã‚°ãƒ‡ãƒ¼ã‚¿ã®è¨ˆç®—ç§‘å­¦");
         
         ListView listView = new ListView(this);
-        // ƒAƒ_ƒvƒ^[‚ğİ’è‚µ‚Ü‚·
+        // ï¿½Aï¿½_ï¿½vï¿½^ï¿½[ï¿½ï¿½İ’è‚µï¿½Ü‚ï¿½
         listView.setAdapter(adapter);
         
 
         
         absoluteLayout.addView(listView, new AbsoluteLayout.LayoutParams(720,750, 0, 0));
 	
-        // ƒŠƒXƒgƒrƒ…[‚ÌƒAƒCƒeƒ€‚ªƒNƒŠƒbƒN‚³‚ê‚½‚ÉŒÄ‚Ño‚³‚ê‚éƒR[ƒ‹ƒoƒbƒNƒŠƒXƒi[‚ğ“o˜^‚µ‚Ü‚·
+        // ï¿½ï¿½ï¿½Xï¿½gï¿½rï¿½ï¿½ï¿½[ï¿½ÌƒAï¿½Cï¿½eï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½bï¿½Nï¿½ï¿½ï¿½ê‚½ï¿½ï¿½ï¿½ÉŒÄ‚Ñoï¿½ï¿½ï¿½ï¿½ï¿½Rï¿½[ï¿½ï¿½ï¿½oï¿½bï¿½Nï¿½ï¿½ï¿½Xï¿½iï¿½[ï¿½ï¿½oï¿½^ï¿½ï¿½ï¿½Ü‚ï¿½
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
         	
         	/*
@@ -156,7 +156,7 @@ public class kamoku extends Activity {
             public void onItemClick(AdapterView<?> parent, View view,
                     int position, long id) {
                 ListView listView = (ListView) parent;
-                // ƒNƒŠƒbƒN‚³‚ê‚½ƒAƒCƒeƒ€‚ğæ“¾‚µ‚Ü‚·
+                // ï¿½Nï¿½ï¿½ï¿½bï¿½Nï¿½ï¿½ï¿½ê‚½ï¿½Aï¿½Cï¿½eï¿½ï¿½ï¿½ï¿½ï¿½æ“¾ï¿½ï¿½ï¿½Ü‚ï¿½
                 String item = (String) listView.getItemAtPosition(position);
                 
                 Intent intent1 = new Intent(kamoku.this, lecture1.class);
@@ -171,14 +171,14 @@ public class kamoku extends Activity {
                 Intent intent10 = new Intent(kamoku.this, lecture1.class);
                 Intent intent11 = new Intent(kamoku.this, lecture2.class);
                 Intent intent12 = new Intent(kamoku.this, lecture3.class);
-        		//startActivityForResult(intent, 1);@@
-                if(item == "î•ñƒVƒXƒeƒ€İŒv˜_‡T"){
+        		//startActivityForResult(intent, 1);ï¿½@ï¿½@
+                if(item == "æƒ…å ±ã‚·ã‚¹ãƒ†ãƒ è¨­è¨ˆè«–â… "){
         		startActivity(intent1);
                 }
-                else if(item == "î•ñƒVƒXƒeƒ€İŒv˜_‡U"){
+                else if(item == "æƒ…å ±ã‚·ã‚¹ãƒ†ãƒ è¨­è¨ˆè«–â…¡"){
             		startActivity(intent2);
                 }
-                else if(item == "î•ñƒVƒXƒeƒ€•ªÍ˜_"){
+                else if(item == "æƒ…å ±ã‚·ã‚¹ãƒ†ãƒ åˆ†æè«–"){
             		startActivity(intent3);
                 }
                 
@@ -195,7 +195,7 @@ public class kamoku extends Activity {
         
 
 		Button btn = new Button(this);
-        btn.setText("–ß‚é");
+        btn.setText("æˆ»ã‚‹");
         absoluteLayout.addView(btn, new AbsoluteLayout.LayoutParams(150,150, 280, 820));
 		
 		//Button btn = (Button)findViewById(R.id.button02);
@@ -207,7 +207,7 @@ public class kamoku extends Activity {
 			});
 		/*
 		Button btn2 = new Button(this);
-        btn2.setText("u‹`–¼");
+        btn2.setText("ï¿½uï¿½`ï¿½ï¿½");
         absoluteLayout.addView(btn2, new AbsoluteLayout.LayoutParams(150,150, 300, 700));
         */
         /*

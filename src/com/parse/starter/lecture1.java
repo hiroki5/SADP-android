@@ -26,32 +26,32 @@ public class lecture1 extends Activity {
 		//String names=("k5");
 		query.whereEqualTo("foo", "k5");
 		//query.whereContainedIn("foo", Arrays.asList(names));
-		int score = 10000; // ‚±‚±‚Ì’l‚Í“KØ‚Éİ’è
+		int score = 10000; // ï¿½ï¿½ï¿½ï¿½ï¿½Ì’lï¿½Í“Kï¿½Ø‚Éİ’ï¿½
 		try{
-			System.out.println("ƒAƒNƒZƒX");
+			System.out.println("ï¿½Aï¿½Nï¿½Zï¿½X");
 			List<ParseObject> objects = query.find();
 			ParseObject object = objects.get(0);
 			score = object.getInt("score");
 		}catch(Exception e){
-			// parse‚ÌƒAƒNƒZƒX‚É¸”s‚µ‚½‚Æ‚«‚Ìˆ—
-			System.out.println("ƒAƒNƒZƒX¸”s");
+			// parseï¿½ÌƒAï¿½Nï¿½Zï¿½Xï¿½Éï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½Ìï¿½ï¿½ï¿½
+			System.out.println("ï¿½Aï¿½Nï¿½Zï¿½Xï¿½ï¿½ï¿½s");
 		}
 		
 		
         TextView textView = new TextView(getApplicationContext());
-        // ƒeƒLƒXƒgƒrƒ…[‚ÌƒeƒLƒXƒg‚ğİ’è
+        // ï¿½eï¿½Lï¿½Xï¿½gï¿½rï¿½ï¿½ï¿½[ï¿½Ìƒeï¿½Lï¿½Xï¿½gï¿½ï¿½İ’ï¿½
         textView.setText(String.valueOf(score));
-        //‰æ–Ê‚É•\¦
+        //ï¿½ï¿½Ê‚É•\ï¿½ï¿½
         absoluteLayout.addView(textView);
         
         TextView textView2 = new TextView(getApplicationContext());
-        // ƒeƒLƒXƒgƒrƒ…[‚ÌƒeƒLƒXƒg‚ğİ’è
-        textView2.setText("î•ñƒVƒXƒeƒ€İŒv˜_‡T");
-        //‰æ–Ê‚É•\¦
+        // ï¿½eï¿½Lï¿½Xï¿½gï¿½rï¿½ï¿½ï¿½[ï¿½Ìƒeï¿½Lï¿½Xï¿½gï¿½ï¿½İ’ï¿½
+        textView2.setText("æƒ…å ±ã‚·ã‚¹ãƒ†ãƒ è¨­è¨ˆè«–â… ");
+        //ï¿½ï¿½Ê‚É•\ï¿½ï¿½
         absoluteLayout.addView(textView2);
 		
 		Button btn = new Button(this);
-        btn.setText("–ß‚é");
+        btn.setText("æˆ»ã‚‹");
         absoluteLayout.addView(btn, new AbsoluteLayout.LayoutParams(150,150, 280, 200));
 		
 		//Button btn = (Button)findViewById(R.id.button02);
