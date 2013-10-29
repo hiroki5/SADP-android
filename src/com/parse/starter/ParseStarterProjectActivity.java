@@ -51,7 +51,7 @@ public class ParseStarterProjectActivity extends Activity implements OnClickList
         	}
         });
         
-        absoluteLayout.addView(btn, new AbsoluteLayout.LayoutParams(350,150, 300, 200));
+        absoluteLayout.addView(btn, new AbsoluteLayout.LayoutParams(350,150, 180, 200));
         
         Button btn2 = new Button(this);
         btn2.setText("Žö‹Æˆê——");
@@ -64,7 +64,7 @@ public class ParseStarterProjectActivity extends Activity implements OnClickList
         });
         //LayoutParams lp2 = new LayoutParams(200, 100);
         //btn.setGravity(Gravity.TOP, 0, 0);  
-        absoluteLayout.addView(btn2, new AbsoluteLayout.LayoutParams(350,150, 300, 500));
+        absoluteLayout.addView(btn2, new AbsoluteLayout.LayoutParams(350,150, 185, 500));
         
         /*
 		Parse.initialize(this, "MKIBFNmKgL8OL7cujgOPavuViXAkPBG10ubFQq39", "HCQk4oW34fksE4yUZiyJRBV0WaanjtYJhloYdNhc");
