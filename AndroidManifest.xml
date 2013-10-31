@@ -40,6 +40,9 @@
         <activity android:name=".lecture3"
             android:label="@string/app_name">
         </activity>
+        <activity android:name=".lecture5"
+            android:label="@string/app_name">
+        </activity>
         
         <activity
             android:name="com.parse.starter.courses.CourseListActivity"

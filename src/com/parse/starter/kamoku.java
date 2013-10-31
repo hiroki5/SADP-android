@@ -163,7 +163,7 @@ public class kamoku extends Activity {
                 Intent intent2 = new Intent(kamoku.this, lecture2.class);
                 Intent intent3 = new Intent(kamoku.this, lecture3.class);
                 Intent intent4 = new Intent(kamoku.this, lecture1.class);
-                Intent intent5 = new Intent(kamoku.this, lecture2.class);
+                Intent intent5 = new Intent(kamoku.this, lecture5.class);
                 Intent intent6 = new Intent(kamoku.this, lecture3.class);
                 Intent intent7 = new Intent(kamoku.this, lecture1.class);
                 Intent intent8 = new Intent(kamoku.this, lecture2.class);
@@ -180,6 +180,9 @@ public class kamoku extends Activity {
                 }
                 else if(item == "情報システム分析論"){
             		startActivity(intent3);
+                }
+                else if(item == "情報社会論"){
+            		startActivity(intent5);
                 }
                 
         		//finish();

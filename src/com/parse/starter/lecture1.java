@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AbsoluteLayout;
 import android.widget.Button;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 public class lecture1 extends Activity {
@@ -44,6 +45,11 @@ public class lecture1 extends Activity {
         //��ʂɕ\��
         absoluteLayout.addView(textView);
         
+        RatingBar ratingBar2 = new RatingBar(this);
+        ratingBar2.setNumStars(5);
+        ratingBar2.setRating(2);
+        absoluteLayout.addView(ratingBar2, new AbsoluteLayout.LayoutParams(600,150, 0, 500));
+        
         TextView textView2 = new TextView(getApplicationContext());
         // �e�L�X�g�r���[�̃e�L�X�g��ݒ�
         textView2.setText("情報システム設計論Ⅰ");
@@ -61,6 +67,9 @@ public class lecture1 extends Activity {
 				finish();
 				}
 			});
-		}
+		
+		
+        
+	}
 	
 }

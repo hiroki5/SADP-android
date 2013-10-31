@@ -35,6 +35,11 @@ public class ParseStarterProjectActivity extends Activity implements OnClickList
         AbsoluteLayout absoluteLayout = new AbsoluteLayout(this); 
         setContentView(absoluteLayout);
         
+        TextView a = new TextView(this);
+        a.setText("タイトル(アプリ名)");
+        a.setTextSize(33);
+        absoluteLayout.addView(a, new AbsoluteLayout.LayoutParams(600,150, 80, 150));
+        
         Button button = new Button(this);
         button.setId(START_COURSE_LIST_ACTIVITY);
         button.setText("Start CourseListActivity");
@@ -51,7 +56,7 @@ public class ParseStarterProjectActivity extends Activity implements OnClickList
         	}
         });
         
-        absoluteLayout.addView(btn, new AbsoluteLayout.LayoutParams(350,150, 180, 200));
+        absoluteLayout.addView(btn, new AbsoluteLayout.LayoutParams(350,150, 185, 350));
         
         Button btn2 = new Button(this);
         btn2.setText("講義一覧");
@@ -64,7 +69,7 @@ public class ParseStarterProjectActivity extends Activity implements OnClickList
         });
         //LayoutParams lp2 = new LayoutParams(200, 100);
         //btn.setGravity(Gravity.TOP, 0, 0);  
-        absoluteLayout.addView(btn2, new AbsoluteLayout.LayoutParams(350,150, 185, 500));
+        absoluteLayout.addView(btn2, new AbsoluteLayout.LayoutParams(350,150, 185, 650));
         
         /*
 		Parse.initialize(this, "MKIBFNmKgL8OL7cujgOPavuViXAkPBG10ubFQq39", "HCQk4oW34fksE4yUZiyJRBV0WaanjtYJhloYdNhc");
