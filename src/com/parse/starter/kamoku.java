@@ -29,9 +29,9 @@ public class kamoku extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		AbsoluteLayout absoluteLayout = new AbsoluteLayout(this); 
-		absoluteLayout.setBackgroundColor(Color.BLACK);
-		setContentView(absoluteLayout);
+		//AbsoluteLayout absoluteLayout = new AbsoluteLayout(this); 
+		//absoluteLayout.setBackgroundColor(Color.BLACK);
+		setContentView(R.layout.kamoku);
 		
 		/*
         String[] color = { "Red", "Maroon", "Purple","Olive","Fuchsia" };
@@ -130,16 +130,16 @@ public class kamoku extends Activity {
         adapter.add("計算科学演習B");
         adapter.add("ビッグデータの計算科学");
         
-        ListView listView = new ListView(this);
+        ListView lv = (ListView) findViewById(R.id.listview);
         // �A�_�v�^�[��ݒ肵�܂�
-        listView.setAdapter(adapter);
+        lv.setAdapter(adapter);
         
 
         
-        absoluteLayout.addView(listView, new AbsoluteLayout.LayoutParams(720,750, 0, 0));
+       // absoluteLayout.addView(listView, new AbsoluteLayout.LayoutParams(720,750, 0, 0));
 	
         // ���X�g�r���[�̃A�C�e�����N���b�N���ꂽ���ɌĂяo�����R�[���o�b�N���X�i�[��o�^���܂�
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
         	
         	/*
         	@Override
@@ -196,10 +196,9 @@ public class kamoku extends Activity {
         
         
         
-
-		Button btn = new Button(this);
+        Button btn = (Button) findViewById(R.id.button);
         btn.setText("戻る");
-        absoluteLayout.addView(btn, new AbsoluteLayout.LayoutParams(150,150, 280, 820));
+        //absoluteLayout.addView(btn, new AbsoluteLayout.LayoutParams(150,150, 280, 820));
 		
 		//Button btn = (Button)findViewById(R.id.button02);
 		btn.setOnClickListener(new View.OnClickListener() {

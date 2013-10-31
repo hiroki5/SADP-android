@@ -48,7 +48,7 @@ public class lecture5 extends Activity {
 		
 		//String[] b = null;
 		String b;
-		String []a = new String[2];
+		String []a = new String[3];
 		
 		ParseQuery<ParseObject> query2 = ParseQuery.getQuery("lecture5");
 		try{
@@ -58,12 +58,16 @@ public class lecture5 extends Activity {
 			a[0] = object2.getString("review");
 			ParseObject object3 = objects2.get(1);
 			a[1] = object3.getString("review");
+			ParseObject object4 = objects2.get(2);
+			a[2] = object4.getString("review");
 			
 			TextView[] Review = new TextView[3];
 			Review[0] = (TextView)findViewById(R.id.textView5);
 	        Review[0].setText("レビュー1："+a[0]);
 	        Review[1] = (TextView)findViewById(R.id.textView6);
 	        Review[1].setText("レビュー2："+a[1]);
+	        Review[2] = (TextView)findViewById(R.id.textView9);
+	        Review[2].setText("レビュー3："+a[2]);
 		}catch(Exception e){
 			// parse�̃A�N�Z�X�Ɏ��s�����Ƃ��̏���
 			System.out.println("�A�N�Z�X���s");
@@ -99,8 +103,8 @@ public class lecture5 extends Activity {
         TextView textView4 = (TextView)findViewById(R.id.textView3);
         textView4.setText("評価");
         
-        TextView textView5 = (TextView)findViewById(R.id.textView4);
-        textView5.setText("レビュー");
+        //TextView textView5 = (TextView)findViewById(R.id.textView4);
+        //textView5.setText("レビュー");
         
         RatingBar ratingBar = (RatingBar)findViewById(R.id.ratingBar1);
         ratingBar.setNumStars(5);
