@@ -19,6 +19,7 @@ import com.parse.ParseAnalytics;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.starter.courses.CourseListActivity;
+import com.parse.starter.timetable.TimeTableActivity;
 
 public class ParseStarterProjectActivity extends Activity implements OnClickListener {
 	
@@ -104,7 +105,7 @@ public class ParseStarterProjectActivity extends Activity implements OnClickList
 	public void onClick(View view) {
 		switch(view.getId()) {
 			case START_COURSE_LIST_ACTIVITY:
-				Intent intent = new Intent(this, CourseListActivity.class);
+				Intent intent = new Intent(this, TimeTableActivity.class);
 				startActivity(intent);
 		}
 	}

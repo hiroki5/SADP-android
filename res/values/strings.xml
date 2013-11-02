@@ -4,4 +4,12 @@
     <string name="app_name">ParseStarterProject</string>
     <string name="button_label">ボタン</string>
     <string name="course_list_activity">CourseListActivity</string>
+    <string name="timetable">時間割</string>
+    
+    <!-- Day -->
+    <string name="monday">月曜日</string>
+    <string name="tuesday">火曜日</string>
+    <string name="wednesday">水曜日</string>
+    <string name="thursday">木曜日</string>
+    <string name="friday">金曜日</string>
 </resources>
