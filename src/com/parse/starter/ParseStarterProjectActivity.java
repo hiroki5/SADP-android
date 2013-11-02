@@ -57,7 +57,7 @@ public class ParseStarterProjectActivity extends Activity implements OnClickList
         btn.setOnClickListener(new View.OnClickListener() {
         	@Override
         	public void onClick(View v) {
-        		Intent intent = new Intent(ParseStarterProjectActivity.this, time.class);
+        		Intent intent = new Intent(ParseStarterProjectActivity.this, TimeTableActivity.class);
         		startActivity(intent);
         	}
         });
