@@ -44,9 +44,10 @@
             android:name="com.parse.starter.timetable.TimeTableActivity"
             android:label="@string/timetable" />
         <activity
+	    android:name=".lecture5"
+            android:label="@string/app_name" />
+        <activity
             android:name="com.parse.starter.courses.CourseListActivity"
-            android:label="@string/course_list_activity">
-        </activity>
-        
+            android:label="@string/course_list_activity" />
     </application>
 </manifest>

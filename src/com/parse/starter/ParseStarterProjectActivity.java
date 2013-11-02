@@ -31,18 +31,28 @@ public class ParseStarterProjectActivity extends Activity implements OnClickList
 		// TODO Remove unused codes.
 		
 		super.onCreate(savedInstanceState);
-		Log.d("Debug:", "ParseStarterProjectApplication onCreate");
+		//Log.d("Debug:", "ParseStarterProjectApplication onCreate");
 		//setContentView(R.layout.main);
-        AbsoluteLayout absoluteLayout = new AbsoluteLayout(this); 
-        setContentView(absoluteLayout);
+        //AbsoluteLayout absoluteLayout = new AbsoluteLayout(this); 
+        //setContentView(absoluteLayout);
+        setContentView(R.layout.top);
         
-        Button button = new Button(this);
+        
+        TextView a = (TextView)findViewById(R.id.textView1);
+        a.setText("タイトル(アプリ名)");
+        //a.setTextSize(33);
+        //absoluteLayout.addView(a, new AbsoluteLayout.LayoutParams(600,150, 80, 150));
+        /*
+        Button button = (Button) findViewById(R.id.button);
+        //Button button = new Button(this);
         button.setId(START_COURSE_LIST_ACTIVITY);
         button.setText("Start CourseListActivity");
         button.setOnClickListener(this);
-        absoluteLayout.addView(button);
+        //absoluteLayout.addView(button);
+         */
         
-        Button btn = new Button(this);
+        Button btn = (Button) findViewById(R.id.button2);
+        //Button btn = new Button(this);
         btn.setText("時間割");
         btn.setOnClickListener(new View.OnClickListener() {
         	@Override
@@ -52,9 +62,10 @@ public class ParseStarterProjectActivity extends Activity implements OnClickList
         	}
         });
         
-        absoluteLayout.addView(btn, new AbsoluteLayout.LayoutParams(350,150, 180, 200));
+        //absoluteLayout.addView(btn, new AbsoluteLayout.LayoutParams(350,150, 185, 350));
         
-        Button btn2 = new Button(this);
+        Button btn2 = (Button) findViewById(R.id.button3);
+        //Button btn2 = new Button(this);
         btn2.setText("講義一覧");
         btn2.setOnClickListener(new View.OnClickListener() {
         	@Override
@@ -65,7 +76,7 @@ public class ParseStarterProjectActivity extends Activity implements OnClickList
         });
         //LayoutParams lp2 = new LayoutParams(200, 100);
         //btn.setGravity(Gravity.TOP, 0, 0);  
-        absoluteLayout.addView(btn2, new AbsoluteLayout.LayoutParams(350,150, 185, 500));
+        //absoluteLayout.addView(btn2, new AbsoluteLayout.LayoutParams(350,150, 185, 650));
         
         /*
 		Parse.initialize(this, "MKIBFNmKgL8OL7cujgOPavuViXAkPBG10ubFQq39", "HCQk4oW34fksE4yUZiyJRBV0WaanjtYJhloYdNhc");
