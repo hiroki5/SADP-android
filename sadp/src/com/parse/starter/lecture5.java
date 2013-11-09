@@ -7,17 +7,24 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.SpannableStringBuilder;
+import android.util.Log;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AbsoluteLayout;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.RatingBar.OnRatingBarChangeListener;
 import android.widget.Toast;
 
 public class lecture5 extends Activity {
-	
+	float d;
 	@Override
   public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -111,8 +118,9 @@ public class lecture5 extends Activity {
         ratingBar.setRating(3);
         ratingBar.setIsIndicator(true);
         
-        TextView textView6 = (TextView)findViewById(R.id.textView7);
-        textView6.setText("登録");
+        
+        //TextView textView6 = (TextView)findViewById(R.id.textView7);
+        //textView6.setText("登録");
         
         
         //RatingBar ratingBar2 = (RatingBar)findViewById(R.id.ratingBar2);
@@ -127,20 +135,67 @@ public class lecture5 extends Activity {
         //ratingBar2.setStepSize((float) 0.5);
         // レートの初期値を2.0に設定
         //ratingBar2.setRating((float) 2.0);
-
+        
+        /*
         final RatingBar ratingbar = (RatingBar) findViewById(R.id.ratingBar2);
         ratingbar.setOnRatingBarChangeListener(new OnRatingBarChangeListener() {
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
                 //Toast.makeText(null, "New Rating: " + rating, Toast.LENGTH_SHORT).show();
+            	
             	TextView textView7 = (TextView)findViewById(R.id.textView8);
             	textView7.setText("今のレート：" + ratingBar.getRating() + "/"
                         + ratingBar.getNumStars());
+            	
+            	d = ratingBar.getRating();
             }
         });
+        
+        
+        
+        
+        
+        
+        final EditText edit = (EditText) findViewById(R.id.edittext1);
+        edit.setHeight(100);
+        final CharSequence str = edit.getText();
+        
+        SpannableStringBuilder sp = (SpannableStringBuilder)edit.getText();
+        
+        final CharSequence aa="";
+        
+        
+        
         
         Button button = (Button) findViewById(R.id.button);
         button.setText("登録");
         
+        button.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                SpannableStringBuilder sp = (SpannableStringBuilder)edit.getText();
+                String bb;
+                bb = sp.toString();
+                //Log.v("onCreate", bb);
+                ParseObject gameScore = new ParseObject("lecture5");
+                gameScore.put("review", bb);
+                gameScore.put("score", d);
+                gameScore.saveInBackground();
+            }
+        });
+        
+        */
+        
+        Button button1 = (Button) findViewById(R.id.button1);
+        button1.setText("レビューを登録する");
+        
+        button1.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(lecture5.this, lecture5t.class);
+				startActivity(intent);
+				}
+			});
+		
+        /*
 		Button btn = new Button(this);
         btn.setText("戻る");
         //absoluteLayout.addView(btn, new AbsoluteLayout.LayoutParams(150,150, 280, 200));
@@ -152,6 +207,7 @@ public class lecture5 extends Activity {
 				finish();
 				}
 			});
+			*/
 		}
 	
 }
