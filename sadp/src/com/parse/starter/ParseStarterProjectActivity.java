@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+
+import com.parse.starter.courses.CourseListActivity;
 import com.parse.starter.timetable.TimeTableActivity;
 
 public class ParseStarterProjectActivity extends Activity implements OnClickListener {
@@ -27,7 +29,7 @@ public class ParseStarterProjectActivity extends Activity implements OnClickList
 				startActivity(new Intent(this, TimeTableActivity.class));
 				break;
 			case R.id.courseListButton:
-        		startActivity(new Intent(this, kamoku.class));
+        		startActivity(new Intent(this, CourseListActivity.class));
         		break;
 		}
 	}
