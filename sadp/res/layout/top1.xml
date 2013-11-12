@@ -19,11 +19,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     
-    <EditText
-        android:id="@+id/edittext1"
-        android:layout_margin="10.0sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" /> 
+    <Button
+        android:id="@+id/timeTableButton"
+        android:text="@string/timetable"
+        android:layout_gravity="center" 
+        android:layout_margin="50sp"
+        android:layout_width="200sp"
+        android:layout_height="80sp" />
         
     <Button
         android:id="@+id/courseListButton"
