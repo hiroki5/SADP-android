@@ -9,7 +9,7 @@ import com.fima.cardsui.objects.Card;
 import com.parse.starter.R;
 
 public class CourseCard extends Card {
-
+	
 	public CourseCard(String title) {
 		super(title);
 	}

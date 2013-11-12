@@ -10,13 +10,13 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-
 import com.parse.FindCallback;
 import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
+import com.parse.starter.courses.CourseListActivity;
 import com.parse.starter.timetable.TimeTableActivity;
 
 public class ParseStarterProjectActivity extends Activity implements OnClickListener {
@@ -72,28 +72,19 @@ public class ParseStarterProjectActivity extends Activity implements OnClickList
         //timeTableButton.setOnClickListener(this);
         courseListButton.setOnClickListener(this);
 	}
-	
-	
 
 	@Override
 	public void onClick(View view) {
-		//switch(view.getId()) {
-			//case R.id.timeTableButton:
-				//startActivity(new Intent(this, TimeTableActivity.class));
-				//break;
-			//case R.id.courseListButton:
 		final EditText edit = (EditText) findViewById(R.id.edittext1);
-        edit.setHeight(100);
+        	edit.setHeight(100);
 		
 		SpannableStringBuilder sp = (SpannableStringBuilder)edit.getText();
-        bb = sp.toString();
+        	bb = sp.toString();
 		System.out.println(bb);
 		for(int i=0;i<3;i++){
-		if(bb.equals(a[i])){
-        		startActivity(new Intent(this, top.class));
+			if(bb.equals(a[i])){
+        			startActivity(new Intent(this, top.class));
+			}
 		}
-		}
-        		//break;
-		//}
 	}
 }
