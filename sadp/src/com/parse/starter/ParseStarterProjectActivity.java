@@ -18,6 +18,7 @@ import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.starter.courses.CourseListActivity;
 import com.parse.starter.timetable.TimeTableActivity;
+import com.parse.starter.util.LoginUtil;
 
 public class ParseStarterProjectActivity extends Activity implements OnClickListener {
 	String bb;
@@ -27,6 +28,8 @@ public class ParseStarterProjectActivity extends Activity implements OnClickList
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.top);
         
+		LoginUtil loginUtil = LoginUtil.getLoginUtil();
+		
         //Button timeTableButton = (Button) findViewById(R.id.timeTableButton);
         Button courseListButton = (Button) findViewById(R.id.courseListButton);
         courseListButton.setText("ログイン");
