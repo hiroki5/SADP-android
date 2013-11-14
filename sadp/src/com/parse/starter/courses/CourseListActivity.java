@@ -1,5 +1,6 @@
 package com.parse.starter.courses;
 
+import com.parse.starter.ParseStarterProjectActivity;
 import com.parse.starter.R;
 import com.parse.starter.model.courses.Category;
 import com.parse.starter.model.courses.CourseMockData;
@@ -7,6 +8,7 @@ import com.parse.starter.model.courses.CourseMockData;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -14,6 +16,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.view.MenuItem;
 
 public class CourseListActivity extends FragmentActivity implements OnPageChangeListener {
 	
@@ -29,6 +32,7 @@ public class CourseListActivity extends FragmentActivity implements OnPageChange
 
 		final ActionBar actionBar = getActionBar();
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+		actionBar.setDisplayHomeAsUpEnabled(true);
 		
 		final CourseListTabListener tabListener = new CourseListTabListener();
 		
@@ -42,6 +46,18 @@ public class CourseListActivity extends FragmentActivity implements OnPageChange
 		CourseListFragmentPagerAdapter pagerAdapter = new CourseListFragmentPagerAdapter(getSupportFragmentManager());
 		viewPager.setOnPageChangeListener(this);
 		viewPager.setAdapter(pagerAdapter);
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch(item.getItemId()) {
+		case android.R.id.home:
+			Intent intent = new Intent(this, ParseStarterProjectActivity.class);
+			startActivity(intent);
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
 	}
 	
 	private class CourseListTabListener implements ActionBar.TabListener {
