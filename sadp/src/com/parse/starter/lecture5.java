@@ -190,7 +190,7 @@ public class lecture5 extends Activity {
         button1.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(lecture5.this, lecture5t.class);
+				Intent intent = new Intent(lecture5.this, test2.class);
 				startActivity(intent);
 				}
 			});

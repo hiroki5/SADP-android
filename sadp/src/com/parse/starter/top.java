@@ -15,8 +15,8 @@ public class top extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.top1);
         
-        Button timeTableButton = (Button) findViewById(R.id.timeTableButton);
-        Button courseListButton = (Button) findViewById(R.id.courseListButton);
+        Button timeTableButton = (Button) findViewById(R.id.button2);
+        Button courseListButton = (Button) findViewById(R.id.button3);
         
         timeTableButton.setOnClickListener(this);
         courseListButton.setOnClickListener(this);
@@ -25,10 +25,10 @@ public class top extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View view) {
 		switch(view.getId()) {
-			case R.id.timeTableButton:
+			case R.id.button2:
 				startActivity(new Intent(this, TimeTableActivity.class));
 				break;
-			case R.id.courseListButton:
+			case R.id.button3:
         		startActivity(new Intent(this, CourseListActivity.class));
         		break;
 		}

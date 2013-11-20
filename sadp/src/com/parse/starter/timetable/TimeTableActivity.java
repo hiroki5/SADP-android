@@ -2,6 +2,8 @@ package com.parse.starter.timetable;
 
 import com.parse.starter.ParseStarterProjectActivity;
 import com.parse.starter.R;
+import com.parse.starter.top;
+import com.parse.starter.courses.CourseListActivity;
 
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
@@ -13,6 +15,8 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class TimeTableActivity extends FragmentActivity implements OnPageChangeListener {
 	
@@ -81,6 +85,25 @@ public class TimeTableActivity extends FragmentActivity implements OnPageChangeL
 		pagerAdapter = new TimeTableFragmentPagerAdapter(getSupportFragmentManager());
 		viewPager.setOnPageChangeListener(this);
 		viewPager.setAdapter(pagerAdapter);
+		
+		Button button1 = (Button) findViewById(R.id.button1);
+		Button button2 = (Button) findViewById(R.id.button3);
+		
+		button1.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(TimeTableActivity.this, top.class);
+				startActivity(intent);
+				}
+			});
+		
+		button2.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(TimeTableActivity.this, CourseListActivity.class);
+				startActivity(intent);
+				}
+			});
 	}
 
 	@Override

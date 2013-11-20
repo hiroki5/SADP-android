@@ -4,6 +4,15 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
  
+    <LinearLayout
+        android:id="@+id/listView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        >
+ 
+    <!--
     <TextView
         android:textSize="20sp"
         android:lineSpacingExtra="3.0sp"
@@ -34,4 +43,49 @@
         android:layout_margin="50sp"
         android:layout_width="200sp"
         android:layout_height="80sp" />
+    -->
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TOP" 
+            android:layout_weight="1" 
+            android:textColor="#FFFFFF"
+            android:background="@layout/color_stateful"
+            />
+    
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="時間割" 
+            android:textColor="#FFFFFF"
+            android:layout_weight="1" 
+            android:background="@layout/color_stateful"
+            android:layout_marginRight="0.7sp"
+            android:layout_marginLeft="0.7sp"
+            />
+            
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="講義一覧" 
+            android:layout_weight="1" 
+            android:textColor="#FFFFFF"
+            android:background="@layout/color_stateful"
+            />
+        
+    </LinearLayout>
+        
 </LinearLayout>

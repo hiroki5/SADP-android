@@ -57,6 +57,9 @@
 	    android:name=".top"
             android:label="@string/app_name" />
         <activity
+	    android:name=".test2"
+            android:label="@string/app_name" />
+        <activity
             android:name="com.parse.starter.courses.CourseListActivity"
             android:label="@string/courseList" />
     </application>
