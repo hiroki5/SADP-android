@@ -41,7 +41,7 @@ public class CourseListFragment extends Fragment {
 		
 		CardUI cardUi = (CardUI) root.findViewById(R.id.cardUi);
 		for(Course course : courses) {
-			CourseCard courseCard = new CourseCard(course.getCourseName());
+			CourseCard courseCard = new CourseCard(course);
 			
 			// TODO This is temporary implementation, onClickHandler should not be hard-coded here.
 			if(course.getCourseName().equals("情報システム設計論Ⅰ")) {

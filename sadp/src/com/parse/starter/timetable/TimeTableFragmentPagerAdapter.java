@@ -1,6 +1,6 @@
 package com.parse.starter.timetable;
 
-import com.parse.starter.timetable.TimeTableActivity.Day;
+import com.parse.starter.model.courses.Day;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

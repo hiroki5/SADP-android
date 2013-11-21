@@ -2,10 +2,7 @@ package com.parse.starter.model.courses;
 
 public class CourseMockData {
 	public static Category[] getMockData() {
-		Category cat1 = new Category("研究指導科目");
-		cat1.addCourse(new Course("社会情報学特殊研究1"));
-		cat1.addCourse(new Course("社会情報学特殊研究2"));
-		
+		/*
 		Category cat2 = new Category("研究科共通科目");
 		cat2.addCourse(new Course("情報学展望1"));
 		cat2.addCourse(new Course("情報学展望2"));
@@ -69,6 +66,8 @@ public class CourseMockData {
 		cat7.addCourse(new Course("計算科学演習B"));
 		cat7.addCourse(new Course("ビッグデータの計算科学"));
 		
-		return new Category[] {cat1, cat2, cat3, cat4, cat5, cat6, cat7};
+		return new Category[] {cat2, cat3, cat4, cat5, cat6, cat7};
+		*/
+		return null;
 	}
 }

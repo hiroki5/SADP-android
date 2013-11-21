@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<categories>
+    <category name="研究指導科目">
+        <course id="course1"
+            	name="社会情報学特殊研究1"
+            	description="This is a sample course"
+            	day="MON"
+            	hour="1"
+            	room=""
+            	data-source="" />
+        <course id="course2"
+            	name="社会情報学特殊研究2"
+            	description="This is a sample course"
+            	day="MON"
+            	hour="1"
+            	room=""
+            	data-source="" />
+    </category>
+    <category name="研究科共通科目">
+        <course id="course3"
+            	name="情報学展望1"
+            	description="IT革命以降、社会はますますインターネットへの依存を深めている。インターネットはデジタル機器間の情報の流通を極めて高速に安価に行うことを可能にし、コンピュータによるネットワーク接続を身近で手軽なものにした。一般市民の利用が広がるに従い、インターネットは電子政府・自治体や電子商取引など重要な分野でも使用されるようになった。しかし、このことは同時にインターネットの持つ脆弱性に多くの人をさらす結果となっている。本講義では、インターネット上の脅威からユーザを守るために使われている基本的な技術と、実際にありうる脅威、その対策について講述し、技術面から社会現象、法整備まで多岐に渡る内容の紹介を通じて、情報セキュリティの基礎を概観する。"
+            	day="FRI"
+            	hour="2"
+            	room=""
+            	data-source="http://ocw.kyoto-u.ac.jp/syllabuses/269/11/8037000" />
+        <course id="g_inf_1995"
+            	name="情報学展望2"
+            	description="IThe purpose of the course is to introduce simplest algorithms in classical mathematics such as mathematical induction and Euclidean algorithm."
+            	day="FRI"
+            	hour="2"
+            	room=""
+            	data-source="http://ocw.kyoto-u.ac.jp/syllabuses/269/11/8039000" />
+        <course id="g_inf_1998"
+            	name="情報学展望3"
+            	description="未定"
+            	day="MON"
+            	hour="1"
+            	room=""
+            	data-source="http://ocw.kyoto-u.ac.jp/syllabuses/269/11/8041000" />
+        <course id="g_inf_1996"
+            	name="情報学展望4"
+            	description="The purpose of this course is to introduce state-of-the-art research topics in informatics and related areas, including information science."
+            	day="MON"
+            	hour="5"
+            	room=""
+            	data-source="http://ocw.kyoto-u.ac.jp/syllabuses/269/11/8043000" />
+        <course id="course7"
+            	name="情報学展望5"
+            	description="The purpose of this course is to introduce state-of-the-art research topics in informatics and related areas, including computing science."
+            	day="THU"
+            	hour="4"
+            	room=""
+            	data-source="http://ocw.kyoto-u.ac.jp/syllabuses/269/11/8045000" />
+    </category>
+</categories>

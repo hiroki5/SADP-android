@@ -1,13 +1,11 @@
 package com.parse.starter.courses;
 
 import com.parse.starter.ParseStarterProjectActivity;
-import com.parse.starter.lecture5;
-import com.parse.starter.test2;
 import com.parse.starter.top;
 
 import com.parse.starter.R;
 import com.parse.starter.model.courses.Category;
-import com.parse.starter.model.courses.CourseMockData;
+import com.parse.starter.model.courses.CourseDataLoader;
 import com.parse.starter.timetable.TimeTableActivity;
 
 import android.app.ActionBar;
@@ -25,15 +23,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-
 import com.parse.starter.courses.CourseListActivity;
-import com.parse.starter.timetable.TimeTableActivity;
 
 public class CourseListActivity extends FragmentActivity implements OnPageChangeListener {
 	
@@ -53,9 +43,8 @@ public class CourseListActivity extends FragmentActivity implements OnPageChange
 		
 		final CourseListTabListener tabListener = new CourseListTabListener();
 		
-		// Load mock data
-		// TODO This should be replaced with actual data.
-		categories = CourseMockData.getMockData();
+		// Load data
+		categories = CourseDataLoader.loadCourses(getApplicationContext());
 		for(Category category : categories) {
 			actionBar.addTab(actionBar.newTab().setText(category.getCategoryName()).setTabListener(tabListener));
 		}
@@ -83,7 +72,6 @@ public class CourseListActivity extends FragmentActivity implements OnPageChange
 				}
 			});
 	}
-	
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {

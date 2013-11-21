@@ -4,6 +4,7 @@ import com.parse.starter.ParseStarterProjectActivity;
 import com.parse.starter.R;
 import com.parse.starter.top;
 import com.parse.starter.courses.CourseListActivity;
+import com.parse.starter.model.courses.Day;
 
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
@@ -19,47 +20,6 @@ import android.view.View;
 import android.widget.Button;
 
 public class TimeTableActivity extends FragmentActivity implements OnPageChangeListener {
-	
-	public enum Day {
-		Monday(0, R.string.monday),
-		Tuesday(1, R.string.tuesday),
-		Wednesday(2, R.string.wednesday),
-		Thursday(3, R.string.thursday),
-		Friday(4, R.string.friday);
-		
-		private final int position;
-		private final int stringId;
-		
-		private Day(int position, int stringId) {
-			this.position = position;
-			this.stringId = stringId;
-		}
-		
-		public int getPosition() {
-			return this.position;
-		}
-		
-		public int getIdOfString() {
-			return this.stringId;
-		}
-	
-		public static Day converToDay(int position) {
-			switch (position) {
-				case 0:
-					return Day.Monday;
-				case 1:
-					return Day.Tuesday;
-				case 2:
-					return Day.Wednesday;
-				case 3:
-					return Day.Thursday;
-				case 4:
-					return Day.Friday;
-			}
-			
-			return Day.Monday; // Return Monday for error case.
-		}
-	}
 	
 	private TimeTableFragmentPagerAdapter pagerAdapter = null;
 	private ViewPager viewPager = null;

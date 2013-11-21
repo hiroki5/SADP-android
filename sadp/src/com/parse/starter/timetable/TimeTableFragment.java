@@ -2,7 +2,8 @@ package com.parse.starter.timetable;
 
 import com.fima.cardsui.views.CardUI;
 import com.parse.starter.R;
-import com.parse.starter.timetable.TimeTableActivity.Day;
+import com.parse.starter.model.courses.Course;
+import com.parse.starter.model.courses.Day;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -41,7 +42,8 @@ public class TimeTableFragment extends Fragment {
 		
 		String[] mockData = getMockData(day);
 		for(String s : mockData) {
-			cardUi.addCard(new CourseCard(s));
+			// TODO Set actual course data
+			cardUi.addCard(new CourseCard(new Course(null, s, null, null)));
 		}
 		cardUi.refresh();
 		
