@@ -44,10 +44,6 @@ public class TimeTableFragment extends Fragment {
 		Bundle args = getArguments();
 		Day day = (Day) args.getSerializable(ARG_DAY);
 		
-		// Set dayTextView
-		TextView dayTextView = (TextView) root.findViewById(R.id.dayTextView);
-		dayTextView.setText(getString(day.getIdOfString()));
-		
 		Course[] courses = getRegisteredCourses(day);
 		for(Course course: courses) {
 			cardUi.addCard(new CourseCard(course, getActivity(), false));
