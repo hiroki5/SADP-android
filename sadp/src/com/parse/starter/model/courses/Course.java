@@ -28,4 +28,8 @@ public class Course implements Serializable {
 	public String getDescription() {
 		return this.description;
 	}
+	
+	public Day getDay() {
+		return this.day;
+	}
 }

@@ -1,10 +1,17 @@
 package com.parse.starter.timetable;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
 import com.fima.cardsui.views.CardUI;
 import com.parse.starter.R;
+import com.parse.starter.dal.TimeTableDAL;
 import com.parse.starter.model.courses.Course;
+import com.parse.starter.model.courses.CourseDataLoader;
 import com.parse.starter.model.courses.Day;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -40,16 +47,31 @@ public class TimeTableFragment extends Fragment {
 		TextView dayTextView = (TextView) root.findViewById(R.id.dayTextView);
 		dayTextView.setText(getString(day.getIdOfString()));
 		
-		String[] mockData = getMockData(day);
-		for(String s : mockData) {
-			// TODO Set actual course data
-			cardUi.addCard(new CourseCard(new Course(null, s, null, null), false));
+		Course[] courses = getRegisteredCourses(day);
+		for(Course course: courses) {
+			cardUi.addCard(new CourseCard(course, false));
 		}
 		cardUi.refresh();
 		
 		return root;
 	}
-
+	
+	private Course[] getRegisteredCourses(Day day) {
+		TimeTableDAL timeTableDAL = new TimeTableDAL(getActivity().getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE));
+		
+		List<Course> courses = new ArrayList<Course>();
+		
+		Set<String> courseIds = timeTableDAL.getRegisteredCourses();
+		for(String courseId : courseIds) {
+			Course course = CourseDataLoader.getCourse(courseId, getActivity().getApplicationContext());
+			if(course.getDay().equals(day)) {
+				courses.add(course);
+			}
+		}
+		
+		return courses.toArray(new Course[courses.size()]);
+	}
+	
 	private static String[] getMockData(Day day) {
 		switch (day) {
 			case Monday:

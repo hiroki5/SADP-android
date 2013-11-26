@@ -14,7 +14,7 @@ public class TimeTableDAL {
 		this.pref = pref;
 	}
 	
-	private Set<String> getRegisteredCourses() {
+	public Set<String> getRegisteredCourses() {
 		return pref.getStringSet(REGISTERED_COURSES, new HashSet<String>());
 	}
 	
