@@ -17,11 +17,15 @@ public class Course implements Serializable {
 		this.day = day;
 	}
 	
-	public String getDescription() {
-		return this.description;
+	public String getCourseId() {
+		return this.courseId;
 	}
 	
 	public String getCourseName() {
 		return this.courseName;
+	}
+	
+	public String getDescription() {
+		return this.description;
 	}
 }

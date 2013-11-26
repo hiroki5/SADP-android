@@ -62,5 +62,8 @@
         <activity
             android:name="com.parse.starter.courses.CourseListActivity"
             android:label="@string/courseList" />
+        <activity
+            android:name="com.parse.starter.courses.CourseDetailActivity"
+            android:label="@string/courseDetail" />
     </application>
 </manifest>

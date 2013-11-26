@@ -5,6 +5,7 @@
     <string name="button_label">ボタン</string>
     <string name="timetable">時間割</string>
     <string name="courseList">講義一覧</string>
+    <string name="courseDetail">講義詳細</string>
     
     <!-- Day -->
     <string name="monday">月曜日</string>

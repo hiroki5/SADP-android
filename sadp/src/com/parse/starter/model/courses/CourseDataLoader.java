@@ -2,7 +2,9 @@ package com.parse.starter.model.courses;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -17,6 +19,22 @@ public class CourseDataLoader {
 	private static String TAG = "PARSER";
 	
 	private static Category[] cache = null;
+	private static Map<String, Course> coursesMap = new HashMap<String, Course>();
+	
+	/**
+	 * Return course of specified course id.
+	 * @param courseId
+	 * @return
+	 */
+	public static Course getCourse(String courseId, Context context) {
+		loadCourses(context);
+		
+		if(coursesMap.containsKey(courseId)) {
+			return coursesMap.get(courseId);
+		} else {
+			return null;
+		}
+	}
 	
 	// Load categories from XML file
 	public static Category[] loadCourses(Context context) {
@@ -48,11 +66,13 @@ public class CourseDataLoader {
 							String courseId = parser.getAttributeValue(null, "id");
 							String day = parser.getAttributeValue(null, "day");
 							String description = parser.getAttributeValue(null, "description");
-							category.addCourse(new Course(
+							Course course = new Course(
 									courseId,
 									courseName,
 									description,
-									Day.convertToDay(day)));
+									Day.convertToDay(day));
+							coursesMap.put(course.getCourseId(), course);
+							category.addCourse(course);
 						}
 						break;
 				}
