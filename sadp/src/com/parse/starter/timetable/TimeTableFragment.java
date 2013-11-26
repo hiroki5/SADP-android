@@ -18,11 +18,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 public class TimeTableFragment extends Fragment {
 	
 	public static final String ARG_DAY = "ArgDay";
+	private CardUI cardUi = null;
+	private Day day = null;
 	
 	static TimeTableFragment newInstance(Day day) {
 		TimeTableFragment timeTableFragment = new TimeTableFragment();
@@ -39,18 +40,26 @@ public class TimeTableFragment extends Fragment {
 			Bundle savedInstanceState) {
 		View root = inflater.inflate(R.layout.time_table_fragment, container, false);
 		
-		CardUI cardUi = (CardUI)root.findViewById(R.id.cardUi);
+		cardUi = (CardUI)root.findViewById(R.id.cardUi);
 		
 		Bundle args = getArguments();
-		Day day = (Day) args.getSerializable(ARG_DAY);
+		day = (Day) args.getSerializable(ARG_DAY);
+		
+		return root;
+	}
+	
+	@Override
+	public void onResume() {
+		super.onResume();
+		
+		cardUi.clearCards();
 		
 		Course[] courses = getRegisteredCourses(day);
 		for(Course course: courses) {
 			cardUi.addCard(new CourseCard(course, getActivity(), false));
 		}
-		cardUi.refresh();
 		
-		return root;
+		cardUi.refresh();
 	}
 	
 	private Course[] getRegisteredCourses(Day day) {
