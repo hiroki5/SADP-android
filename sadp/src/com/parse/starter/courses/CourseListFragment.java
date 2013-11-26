@@ -2,15 +2,13 @@ package com.parse.starter.courses;
 
 import com.fima.cardsui.views.CardUI;
 import com.parse.starter.R;
+import com.parse.starter.cards.CourseCard;
 import com.parse.starter.model.courses.Course;
-import com.parse.starter.timetable.CourseCard;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 
 public class CourseListFragment extends Fragment {
@@ -37,28 +35,11 @@ public class CourseListFragment extends Fragment {
 		
 		CardUI cardUi = (CardUI) root.findViewById(R.id.cardUi);
 		for(Course course : courses) {
-			CourseCard courseCard = new CourseCard(course, false);
-			courseCard.setOnClickListener(new CardOnClickListener(course.getCourseId()));
+			CourseCard courseCard = new CourseCard(course, getActivity(), false);
 			cardUi.addCard(courseCard);
 		}
 		cardUi.refresh();
 		
 		return root;
-	}
-	
-	private class CardOnClickListener implements OnClickListener {
-
-		private final String courseId;
-		
-		public CardOnClickListener(String courseId) {
-			this.courseId = courseId;
-		}
-
-		@Override
-		public void onClick(View view) {
-			Intent intent = new Intent(getActivity().getApplicationContext(), CourseDetailActivity.class);
-			intent.putExtra(CourseDetailActivity.ARG_COURSE_ID, courseId);
-			startActivity(intent);
-		}
 	}
 }

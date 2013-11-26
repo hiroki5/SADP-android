@@ -2,10 +2,10 @@ package com.parse.starter.courses;
 
 import com.fima.cardsui.views.CardUI;
 import com.parse.starter.R;
+import com.parse.starter.cards.CourseCard;
 import com.parse.starter.cards.RegisterCard;
 import com.parse.starter.model.courses.Course;
 import com.parse.starter.model.courses.CourseDataLoader;
-import com.parse.starter.timetable.CourseCard;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -31,7 +31,7 @@ public class CourseDetailFragment extends Fragment {
 		cardUi.clearCards();
 		
 		Course course = CourseDataLoader.getCourse(courseId, getActivity().getApplicationContext());
-		CourseCard courseCard = new CourseCard(course, true);
+		CourseCard courseCard = new CourseCard(course, null, true);
 		cardUi.addCard(courseCard);
 		
 		RegisterCard registerCard = new RegisterCard(course.getCourseId());

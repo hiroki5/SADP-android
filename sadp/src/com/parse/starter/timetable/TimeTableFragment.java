@@ -6,6 +6,7 @@ import java.util.Set;
 
 import com.fima.cardsui.views.CardUI;
 import com.parse.starter.R;
+import com.parse.starter.cards.CourseCard;
 import com.parse.starter.dal.TimeTableDAL;
 import com.parse.starter.model.courses.Course;
 import com.parse.starter.model.courses.CourseDataLoader;
@@ -49,7 +50,7 @@ public class TimeTableFragment extends Fragment {
 		
 		Course[] courses = getRegisteredCourses(day);
 		for(Course course: courses) {
-			cardUi.addCard(new CourseCard(course, false));
+			cardUi.addCard(new CourseCard(course, getActivity(), false));
 		}
 		cardUi.refresh();
 		
@@ -70,21 +71,5 @@ public class TimeTableFragment extends Fragment {
 		}
 		
 		return courses.toArray(new Course[courses.size()]);
-	}
-	
-	private static String[] getMockData(Day day) {
-		switch (day) {
-			case Monday:
-				return new String[] {"熱力学", "線形代数学入門"};
-			case Tuesday:
-				return new String[] {"情報検索論"};
-			case Wednesday:
-				return new String[] {"データベース", "マルチエージェントシステム"};
-			case Thursday:
-				return new String[] {"微分積分学入門", "コンパイラ", "学生実験4データベース"};
-			case Friday:
-				return new String[] {"学生実験4データベース"};
-		}
-		return null;
 	}
 }
