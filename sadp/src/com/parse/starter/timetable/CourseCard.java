@@ -12,18 +12,25 @@ import com.parse.starter.model.courses.Course;
 public class CourseCard extends Card {
 	
 	private final Course course;
+	private final boolean showFullDescription;
 	
-	public CourseCard(Course course) {
+	public CourseCard(Course course, boolean showFullDescription) {
 		super(course.getCourseName());
 		
 		this.course = course;
+		this.showFullDescription = showFullDescription;
 	}
 	
 	@Override
 	public View getCardContent(Context context) {
 		View view = LayoutInflater.from(context).inflate(R.layout.course_card, null);
 		((TextView)view.findViewById(R.id.title)).setText(title);
-		((TextView)view.findViewById(R.id.description)).setText(course.getDescription());
+		
+		TextView descriptionTextView = (TextView)view.findViewById(R.id.description);
+		descriptionTextView.setText(course.getDescription());
+		if(showFullDescription) {
+			descriptionTextView.setMaxLines(Integer.MAX_VALUE);
+		}
 		
 		return view;
 	}

@@ -37,7 +37,7 @@ public class CourseListFragment extends Fragment {
 		
 		CardUI cardUi = (CardUI) root.findViewById(R.id.cardUi);
 		for(Course course : courses) {
-			CourseCard courseCard = new CourseCard(course);
+			CourseCard courseCard = new CourseCard(course, false);
 			courseCard.setOnClickListener(new CardOnClickListener(course.getCourseId()));
 			cardUi.addCard(courseCard);
 		}

@@ -31,7 +31,7 @@ public class CourseDetailFragment extends Fragment {
 		cardUi.clearCards();
 		
 		Course course = CourseDataLoader.getCourse(courseId, getActivity().getApplicationContext());
-		CourseCard courseCard = new CourseCard(course);
+		CourseCard courseCard = new CourseCard(course, true);
 		cardUi.addCard(courseCard);
 		
 		RegisterCard registerCard = new RegisterCard(course.getCourseId());

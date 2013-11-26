@@ -43,7 +43,7 @@ public class TimeTableFragment extends Fragment {
 		String[] mockData = getMockData(day);
 		for(String s : mockData) {
 			// TODO Set actual course data
-			cardUi.addCard(new CourseCard(new Course(null, s, null, null)));
+			cardUi.addCard(new CourseCard(new Course(null, s, null, null), false));
 		}
 		cardUi.refresh();
 		
