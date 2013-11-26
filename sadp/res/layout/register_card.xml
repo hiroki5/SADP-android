@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardContainer"
+    android:background="@drawable/selectable_background_cardbank"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="16dp" 
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
+
+    <LinearLayout 
+        android:id="@+id/layoutNotRegistered"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical"
+    	android:visibility="gone"
+        >
+	    <TextView 
+	        android:text="@string/this_course_is_not_registered"
+            style="@style/CardText"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        />
+	    <Button 
+	        android:id="@+id/registerCourseButton"
+	        android:text="@string/add_this_course"
+            style="@style/CardText"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        />
+    </LinearLayout>
+    <LinearLayout 
+        android:id="@+id/layoutRegistered"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical"
+    	android:visibility="gone"
+        >
+	    <TextView 
+	        android:text="@string/this_course_is_registered"
+            style="@style/CardText"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        />
+	    <Button 
+	        android:id="@+id/unRegisterCourseButton"
+	        android:text="@string/remove_this_course"
+            style="@style/CardText"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        />
+    </LinearLayout>
+
+</LinearLayout>

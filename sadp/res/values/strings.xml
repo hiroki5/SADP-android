@@ -13,4 +13,12 @@
     <string name="wednesday">水曜日</string>
     <string name="thursday">木曜日</string>
     <string name="friday">金曜日</string>
+    
+    <!-- Detail -->
+    <string name="this_course_is_registered">このコースは時間割に登録されています。</string>
+    <string name="this_course_is_not_registered">このコースは時間割に登録されていません。</string>
+    <string name="add_this_course">このコースを時間割に追加</string>
+    <string name="remove_this_course">このコースを時間割から削除</string>
+    
+    <string name="preference_file_key">PrefFileKey</string>
 </resources>
