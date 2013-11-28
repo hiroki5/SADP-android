@@ -65,5 +65,8 @@
         <activity
             android:name="com.parse.starter.courses.CourseDetailActivity"
             android:label="@string/courseDetail" />
+        <activity
+            android:name="com.parse.starter.courses.CopyOfCourseDetailActivity"
+            android:label="@string/courseDetail" />
     </application>
 </manifest>

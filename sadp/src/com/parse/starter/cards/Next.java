@@ -11,16 +11,20 @@ import android.widget.TextView;
 
 import com.fima.cardsui.objects.Card;
 import com.parse.starter.R;
+import com.parse.starter.top;
+import com.parse.starter.courses.CopyOfCourseDetailActivity;
 import com.parse.starter.courses.CourseDetailActivity;
+import com.parse.starter.courses.CourseDetailFragment;
+import com.parse.starter.courses.CourseListActivity;
 import com.parse.starter.model.courses.Course;
 
-public class CourseCard extends Card implements OnClickListener {
+public class Next extends Card implements OnClickListener {
 	
 	private final Course course;
 	private final boolean showFullDescription;
 	private final Activity activity;
 	
-	public CourseCard(Course course, Activity activity, boolean showFullDescription) {
+	public Next(Course course, Activity activity, boolean showFullDescription) {
 		super(course.getCourseName());
 		
 		this.course = course;
@@ -31,7 +35,8 @@ public class CourseCard extends Card implements OnClickListener {
 	@Override
 	public View getCardContent(Context context) {
 		
-		View view = LayoutInflater.from(context).inflate(R.layout.course_card, null);
+		View view = LayoutInflater.from(context).inflate(R.layout.next, null);
+		/*
 		((TextView)view.findViewById(R.id.title)).setText(title);
 		
 		TextView descriptionTextView = (TextView)view.findViewById(R.id.description);
@@ -39,8 +44,12 @@ public class CourseCard extends Card implements OnClickListener {
 		if(showFullDescription) {
 			descriptionTextView.setMaxLines(Integer.MAX_VALUE);
 		}
+		*/
 		
-		setOnClickListener(this);
+		Button button1 = (Button) view.findViewById(R.id.button1);
+        button1.setText("レビューを登録する");
+		
+		button1.setOnClickListener(this);
 		
 		return view;
 	}
@@ -48,7 +57,7 @@ public class CourseCard extends Card implements OnClickListener {
 	@Override
 	public void onClick(View view) {
 		if(activity != null) {
-			Intent intent = new Intent(activity.getApplicationContext(), CourseDetailActivity.class);
+			Intent intent = new Intent(activity.getApplicationContext(), CopyOfCourseDetailActivity.class);
 			intent.putExtra(CourseDetailActivity.ARG_COURSE_ID, course.getCourseId());
 			activity.startActivity(intent);	
 		}

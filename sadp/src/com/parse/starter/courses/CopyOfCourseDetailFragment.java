@@ -8,6 +8,7 @@ import com.parse.starter.cards.Nextbutton;
 import com.parse.starter.cards.RegisterCard;
 import com.parse.starter.cards.ReviewCard;
 import com.parse.starter.cards.ReviewCard2;
+import com.parse.starter.cards.ReviewRegisterCard;
 import com.parse.starter.model.courses.Course;
 import com.parse.starter.model.courses.CourseDataLoader;
 
@@ -17,12 +18,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class CourseDetailFragment extends Fragment {
+public class CopyOfCourseDetailFragment extends Fragment {
 	public static final String ARG_COURSE_ID = "ArgCourseId";
 	private CardUI cardUi = null;
 	
-	public CourseDetailFragment newInstance(String courseId) {
-		CourseDetailFragment courseDetailFragment = new CourseDetailFragment();
+	public CopyOfCourseDetailFragment newInstance(String courseId) {
+		CopyOfCourseDetailFragment courseDetailFragment = new CopyOfCourseDetailFragment();
 		
 		Bundle args = new Bundle();
 		args.putString(ARG_COURSE_ID, courseId);
@@ -38,22 +39,22 @@ public class CourseDetailFragment extends Fragment {
 		CourseCard courseCard = new CourseCard(course, null, true);
 		cardUi.addCard(courseCard);
 		
-		RegisterCard registerCard = new RegisterCard(course.getCourseId());
-		cardUi.addCard(registerCard);
+		//RegisterCard registerCard = new RegisterCard(course.getCourseId());
+		//cardUi.addCard(registerCard);
 		
-		ReviewCard reviewCard = new ReviewCard(course.getCourseId());
-		cardUi.addCard(reviewCard);
+		ReviewRegisterCard reviewregisterCard = new ReviewRegisterCard(course.getCourseId());
+	    cardUi.addCard(reviewregisterCard);
 		
-		Course course2 = CourseDataLoader.getCourse(courseId, getActivity().getApplicationContext());
-		ReviewCard2 ReviewCard2 = new ReviewCard2(course2, null, true);
-		cardUi.addCard(ReviewCard2);
+		//Course course2 = CourseDataLoader.getCourse(courseId, getActivity().getApplicationContext());
+		//ReviewCard2 ReviewCard2 = new ReviewCard2(course2, null, true);
+		//cardUi.addCard(ReviewCard2);
 		
 		//Nextbutton nextbutton = new Nextbutton(course.getCourseId());
 		//cardUi.addCard(nextbutton);
 		
 		//Course course3 = CourseDataLoader.getCourse(courseId, getActivity().getApplicationContext());
-		Next next = new Next(course, getActivity(), false);
-		cardUi.addCard(next);
+		//Next next = new Next(course, getActivity(), false);
+		//cardUi.addCard(next);
 		
 		//CourseCard courseCard2 = new CourseCard(course, getActivity(), false);
 		//cardUi.addCard(courseCard2);
@@ -64,7 +65,7 @@ public class CourseDetailFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View root = inflater.inflate(R.layout.course_detail_fragment, container, false);
+		View root = inflater.inflate(R.layout.course_detail_fragment2, container, false);
 		
 		cardUi = (CardUI) root.findViewById(R.id.cardUi);
 		
