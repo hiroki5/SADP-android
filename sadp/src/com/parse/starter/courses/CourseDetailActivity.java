@@ -22,6 +22,7 @@ public class CourseDetailActivity extends FragmentActivity {
 		
 		Button button1 = (Button) findViewById(R.id.button1);
 		Button button2 = (Button) findViewById(R.id.button2);
+		Button button3 = (Button) findViewById(R.id.button3);
 		
 		button1.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -35,6 +36,14 @@ public class CourseDetailActivity extends FragmentActivity {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(CourseDetailActivity.this, TimeTableActivity.class);
+				startActivity(intent);
+				}
+			});
+		
+		button3.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(CourseDetailActivity.this, CourseListActivity.class);
 				startActivity(intent);
 				}
 			});
