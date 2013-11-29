@@ -9,6 +9,7 @@ import com.parse.starter.cards.RegisterCard;
 import com.parse.starter.cards.ReviewCard;
 import com.parse.starter.cards.ReviewCard2;
 import com.parse.starter.cards.ReviewRegisterCard;
+import com.parse.starter.cards.ReviewRegisterCard2;
 import com.parse.starter.model.courses.Course;
 import com.parse.starter.model.courses.CourseDataLoader;
 
@@ -44,6 +45,9 @@ public class CopyOfCourseDetailFragment extends Fragment {
 		
 		ReviewRegisterCard reviewregisterCard = new ReviewRegisterCard(course.getCourseId());
 	    cardUi.addCard(reviewregisterCard);
+	    
+	    //Next next = new Next(course, getActivity(), false);
+		//cardUi.addCard(next);
 		
 		//Course course2 = CourseDataLoader.getCourse(courseId, getActivity().getApplicationContext());
 		//ReviewCard2 ReviewCard2 = new ReviewCard2(course2, null, true);

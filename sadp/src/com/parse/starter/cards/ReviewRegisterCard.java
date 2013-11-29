@@ -53,13 +53,12 @@ public class ReviewRegisterCard extends Card implements OnClickListener {
 		RatingBar ratingbar = (RatingBar) view.findViewById(R.id.ratingBar1);
 		ratingbar.setOnRatingBarChangeListener(new OnRatingBarChangeListener() {
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-                //Toast.makeText(null, "New Rating: " + rating, Toast.LENGTH_SHORT).show();
             	
+            	/*
             	TextView textView7 = (TextView) view.findViewById(R.id.textView1);
-            	//TextView textview = new TextView(this);
-            	//TextView tv = new TextView(this);
             	textView7.setText("今のレート：" + ratingBar.getRating() + "/"
                         + ratingBar.getNumStars());
+                        */
             	
             	d = ratingBar.getRating();
             }

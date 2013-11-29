@@ -28,7 +28,7 @@ import com.parse.starter.courses.CourseDetailFragment;
 import com.parse.starter.courses.CourseListActivity;
 import com.parse.starter.model.courses.Course;
 
-public class Next extends Card implements OnClickListener {
+public class ReviewRegisterCard2 extends Card implements OnClickListener {
 	
 	private final Course course;
 	private final boolean showFullDescription;
@@ -38,7 +38,7 @@ public class Next extends Card implements OnClickListener {
 	Button button1;
 	String c="22";
 	
-	public Next(Course course, Activity activity, boolean showFullDescription) {
+	public ReviewRegisterCard2(Course course, Activity activity, boolean showFullDescription) {
 		super(course.getCourseName());
 		
 		this.course = course;
@@ -49,7 +49,7 @@ public class Next extends Card implements OnClickListener {
 	@Override
 	public View getCardContent(Context context) {
 		
-		final View view = LayoutInflater.from(context).inflate(R.layout.next, null);
+		View view = LayoutInflater.from(context).inflate(R.layout.reviewregister_card2, null);
 		/*
 		((TextView)view.findViewById(R.id.title)).setText(title);
 		
@@ -59,9 +59,6 @@ public class Next extends Card implements OnClickListener {
 			descriptionTextView.setMaxLines(Integer.MAX_VALUE);
 		}
 		*/
-		
-		TextView text1 = (TextView) view.findViewById(R.id.textView1);
-		text1.setText("この講義に対するレビューを登録するには認証コードを入力してください");
 		
 		Button button1 = (Button) view.findViewById(R.id.button1);
         button1.setText("レビューを登録する");
@@ -93,11 +90,9 @@ public class Next extends Card implements OnClickListener {
 	   // SpannableStringBuilder sp = (SpannableStringBuilder)edit.getText();
     	//bb = sp.toString();
 	    
-    	final TextView text2 = (TextView) view.findViewById(R.id.textView2);
     	
     	button1.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-            	
                 SpannableStringBuilder sp = (SpannableStringBuilder)edit.getText();
                 bb = sp.toString();
                 for(int i=0;i<3;i++){
@@ -105,9 +100,6 @@ public class Next extends Card implements OnClickListener {
                 Intent intent = new Intent(activity.getApplicationContext(), CopyOfCourseDetailActivity.class);
 				intent.putExtra(CourseDetailActivity.ARG_COURSE_ID, course.getCourseId());
 				activity.startActivity(intent);	
-    				}
-    				else{
-    	        		text2.setText("認証コードが違います");
     				}
                 }
             }
