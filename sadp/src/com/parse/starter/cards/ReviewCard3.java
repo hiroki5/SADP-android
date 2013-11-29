@@ -3,14 +3,9 @@ package com.parse.starter.cards;
 import java.util.List;
 
 import android.content.Context;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.ViewGroup.LayoutParams;
-import android.view.ViewGroup.MarginLayoutParams;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -18,10 +13,13 @@ import com.fima.cardsui.objects.Card;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.starter.R;
-import com.parse.starter.dal.TimeTableDAL;
 
+/**
+ * Review card is a card to show review statements of the course
+ */
 public class ReviewCard3 extends Card {
-	
+
+	private static final String TAG = "ReviewCard3";
 	private final String courseId;
 	
 	public ReviewCard3(String courseId) {
@@ -50,6 +48,7 @@ public class ReviewCard3 extends Card {
 				reviewsLayout.addView(reviewStatement);
 			}
 		}catch(Exception e){
+			Log.e(TAG, "Caught an exception while calculating review score. " + e.toString());
 		}
 		
 		return view;
