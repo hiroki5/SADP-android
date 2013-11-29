@@ -72,12 +72,14 @@ public class ReviewRegisterCard extends Card implements OnClickListener {
         
         //button.setOnClickListener(this);
         
+        final TextView text1 = (TextView) view.findViewById(R.id.textView2);
         
         button.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
+            	text1.setText("登録しました");
                 SpannableStringBuilder sp = (SpannableStringBuilder)edit.getText();
                 bb = sp.toString();
-                ParseObject gameScore = new ParseObject("lecture5");
+                ParseObject gameScore = new ParseObject(courseId);
                 gameScore.put("review", bb);
                 gameScore.put("score", d);
                 gameScore.saveInBackground();

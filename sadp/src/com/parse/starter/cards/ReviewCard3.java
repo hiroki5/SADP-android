@@ -43,6 +43,8 @@ public class ReviewCard3 extends Card implements OnClickListener {
         String []a = new String[3];
 		
 		ParseQuery<ParseObject> query2 = ParseQuery.getQuery(courseId);
+		query2.orderByDescending("createdAt");
+		
 		try{
 			System.out.println("�A�N�Z�X");
 			List<ParseObject> objects2 = query2.find();
