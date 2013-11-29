@@ -19,6 +19,7 @@
         android:allowBackup="false">
         <activity
             android:name="com.yaunix.test.sadp.ParseStarterProjectActivity"
+            android:icon="@drawable/appicon_ver2_inside"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
