@@ -3,6 +3,7 @@ package com.parse.starter.courses;
 import com.fima.cardsui.views.CardUI;
 import com.parse.starter.R;
 import com.parse.starter.cards.CourseCard;
+import com.parse.starter.cards.MapCard;
 import com.parse.starter.cards.Next;
 import com.parse.starter.cards.Nextbutton;
 import com.parse.starter.cards.RegisterCard;
@@ -42,25 +43,17 @@ public class CourseDetailFragment extends Fragment {
 		RegisterCard registerCard = new RegisterCard(course.getCourseId());
 		cardUi.addCard(registerCard);
 		
+		MapCard mapCard = new MapCard();
+		cardUi.addCard(mapCard);
+		
 		ReviewCard reviewCard = new ReviewCard(course.getCourseId());
 		cardUi.addCard(reviewCard);
-		
-		//Course course2 = CourseDataLoader.getCourse(courseId, getActivity().getApplicationContext());
-		//ReviewCard2 ReviewCard2 = new ReviewCard2(course2, null, true);
-		//cardUi.addCard(ReviewCard2);
 		
 		ReviewCard3 reviewCard3 = new ReviewCard3(course.getCourseId());
 		cardUi.addCard(reviewCard3);
 		
-		//Nextbutton nextbutton = new Nextbutton(course.getCourseId());
-		//cardUi.addCard(nextbutton);
-		
-		//Course course3 = CourseDataLoader.getCourse(courseId, getActivity().getApplicationContext());
 		Next next = new Next(course, getActivity(), false);
 		cardUi.addCard(next);
-		
-		//CourseCard courseCard2 = new CourseCard(course, getActivity(), false);
-		//cardUi.addCard(courseCard2);
 		
 		cardUi.refresh();
 	}
