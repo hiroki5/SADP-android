@@ -17,6 +17,8 @@ import com.parse.starter.R;
 import com.parse.starter.courses.CourseDetailActivity;
 import com.parse.starter.model.courses.Course;
 
+// TODO Remove this class if this class is not used.
+
 public class ReviewCard2 extends Card implements OnClickListener {
 	
 	//private final String courseId;
@@ -51,6 +53,7 @@ public class ReviewCard2 extends Card implements OnClickListener {
 			ParseObject object4 = objects2.get(2);
 			a[2] = object4.getString("review");
 			
+			/*
 			TextView[] Review = new TextView[3];
 			Review[0] = (TextView) view.findViewById(R.id.description);
 	        Review[0].setText("レビュー1："+a[0]);
@@ -61,6 +64,7 @@ public class ReviewCard2 extends Card implements OnClickListener {
 	        if(showFullDescription) {
 				Review[0].setMaxLines(Integer.MAX_VALUE);
 			}
+			*/
 		}catch(Exception e){
 			// parse�̃A�N�Z�X�Ɏ��s�����Ƃ��̏���
 			System.out.println("�A�N�Z�X���s");

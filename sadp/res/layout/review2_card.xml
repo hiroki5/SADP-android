@@ -8,71 +8,23 @@
     android:orientation="vertical"
     android:paddingBottom="16dp" >
 
-    <LinearLayout
+    <TextView
+        android:text="@string/review"
+        style="@style/CardTitle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp" >
-
-        <TextView
-            android:id="@+id/title"
-            style="@style/CardTitle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-    </LinearLayout>
-
-    
-
+        android:layout_height="0dip"
+        android:layout_weight="1"
+     	android:paddingLeft="8dp"
+     	android:paddingRight="8dp"    
+        />
+        
     <LinearLayout
+        android:id="@+id/reviews_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:padding="4dp"
         android:orientation="vertical" >
-        <View
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="4dp"
-        android:background="@color/stroke" />
-        <TextView
-            android:id="@+id/description"
-            style="@style/CardText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:ellipsize="end"
-            android:maxLines="4" />
-        <View
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="4dp"
-        android:background="@color/stroke" />
-        <TextView
-            android:id="@+id/description2"
-            style="@style/CardText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:ellipsize="end"
-            android:maxLines="4" />
-       <View
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="4dp"
-        android:background="@color/stroke" />
-       <TextView
-            android:id="@+id/description3"
-            style="@style/CardText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:ellipsize="end"
-            android:maxLines="4" />
     </LinearLayout>
 
 </LinearLayout>

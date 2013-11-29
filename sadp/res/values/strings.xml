@@ -20,6 +20,7 @@
     <string name="add_this_course">このコースを時間割に追加</string>
     <string name="remove_this_course">このコースを時間割から削除</string>
     <string name="evaluation">評価</string>
+    <string name="review">レビュー</string>
     
     <string name="preference_file_key">PrefFileKey</string>
 </resources>
