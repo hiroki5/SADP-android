@@ -8,6 +8,7 @@ import com.parse.starter.cards.Nextbutton;
 import com.parse.starter.cards.RegisterCard;
 import com.parse.starter.cards.ReviewCard;
 import com.parse.starter.cards.ReviewCard2;
+import com.parse.starter.cards.ReviewCard3;
 import com.parse.starter.model.courses.Course;
 import com.parse.starter.model.courses.CourseDataLoader;
 
@@ -44,9 +45,12 @@ public class CourseDetailFragment extends Fragment {
 		ReviewCard reviewCard = new ReviewCard(course.getCourseId());
 		cardUi.addCard(reviewCard);
 		
-		Course course2 = CourseDataLoader.getCourse(courseId, getActivity().getApplicationContext());
-		ReviewCard2 ReviewCard2 = new ReviewCard2(course2, null, true);
-		cardUi.addCard(ReviewCard2);
+		//Course course2 = CourseDataLoader.getCourse(courseId, getActivity().getApplicationContext());
+		//ReviewCard2 ReviewCard2 = new ReviewCard2(course2, null, true);
+		//cardUi.addCard(ReviewCard2);
+		
+		ReviewCard3 reviewCard3 = new ReviewCard3(course.getCourseId());
+		cardUi.addCard(reviewCard3);
 		
 		//Nextbutton nextbutton = new Nextbutton(course.getCourseId());
 		//cardUi.addCard(nextbutton);

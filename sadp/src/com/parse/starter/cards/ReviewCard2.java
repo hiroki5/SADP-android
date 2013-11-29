@@ -19,6 +19,7 @@ import com.parse.starter.model.courses.Course;
 
 public class ReviewCard2 extends Card implements OnClickListener {
 	
+	//private final String courseId;
 	private final Course course;
 	private final boolean showFullDescription;
 	private final Activity activity;
