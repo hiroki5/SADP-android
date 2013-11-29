@@ -3,6 +3,7 @@
     <string name="hello">Hello World, ParseStarterProjectActivity!</string>
     <string name="app_name">クラスナビ</string>
     <string name="button_label">ボタン</string>
+    <string name="top">トップ</string>
     <string name="timetable">時間割</string>
     <string name="courseList">講義一覧</string>
     <string name="courseDetail">講義詳細</string>

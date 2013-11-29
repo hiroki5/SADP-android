@@ -14,7 +14,7 @@
     <application
         android:theme="@style/Theme.Example"
         android:name="ParseApplication"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/appicon_ver2"
         android:label="@string/app_name"
         android:allowBackup="false">
         <activity
@@ -25,48 +25,68 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.yaunix.test.sadp.time"
+        <!-- TODO Move the android:icon to style. -->
+        <activity
+            android:name="com.yaunix.test.sadp.time"
             android:label="@string/app_name"
+            android:icon="@drawable/appicon_ver2_inside"
             android:screenOrientation="landscape">
         </activity>
-        <activity android:name="com.yaunix.test.sadp.kamoku"
+        <activity
+            android:name="com.yaunix.test.sadp.kamoku"
+            android:icon="@drawable/appicon_ver2_inside"
             android:label="@string/app_name">
         </activity>
-        <activity android:name="com.yaunix.test.sadp.lecture1"
+        <activity
+            android:name="com.yaunix.test.sadp.lecture1"
+            android:icon="@drawable/appicon_ver2_inside"
             android:label="@string/app_name">
         </activity>
-        <activity android:name="com.yaunix.test.sadp.lecture2"
+        <activity 
+            android:name="com.yaunix.test.sadp.lecture2"
+            android:icon="@drawable/appicon_ver2_inside"
             android:label="@string/app_name">
         </activity>
-        <activity android:name="com.yaunix.test.sadp.lecture3"
+        <activity
+            android:name="com.yaunix.test.sadp.lecture3"
+            android:icon="@drawable/appicon_ver2_inside"
             android:label="@string/app_name">
         </activity>
         <activity
             android:name="com.yaunix.test.sadp.timetable.TimeTableActivity"
+            android:icon="@drawable/appicon_ver2_inside"
             android:label="@string/timetable" />
         <activity
-	    android:name="com.yaunix.test.sadp.lecture5"
+	    	android:name="com.yaunix.test.sadp.lecture5"
+            android:icon="@drawable/appicon_ver2_inside"
             android:label="@string/app_name" />
         <activity
-	    android:name="com.yaunix.test.sadp.lecture5t"
+	    	android:name="com.yaunix.test.sadp.lecture5t"
+            android:icon="@drawable/appicon_ver2_inside"
             android:label="@string/app_name" />
         <activity
-	    android:name="com.yaunix.test.sadp.test"
+	    	android:name="com.yaunix.test.sadp.test"
+            android:icon="@drawable/appicon_ver2_inside"
             android:label="@string/app_name" />
         <activity
-	    android:name="com.yaunix.test.sadp.top"
+	    	android:name="com.yaunix.test.sadp.top"
+            android:icon="@drawable/appicon_ver2_inside"
             android:label="@string/app_name" />
         <activity
-	    android:name="com.yaunix.test.sadp.test2"
+	    	android:name="com.yaunix.test.sadp.test2"
+            android:icon="@drawable/appicon_ver2_inside"
             android:label="@string/app_name" />
         <activity
             android:name="com.yaunix.test.sadp.courses.CourseListActivity"
+            android:icon="@drawable/appicon_ver2_inside"
             android:label="@string/courseList" />
         <activity
             android:name="com.yaunix.test.sadp.courses.CourseDetailActivity"
+            android:icon="@drawable/appicon_ver2_inside"
             android:label="@string/courseDetail" />
         <activity
             android:name="com.yaunix.test.sadp.courses.CopyOfCourseDetailActivity"
+            android:icon="@drawable/appicon_ver2_inside"
             android:label="@string/courseDetail" />
     </application>
 </manifest>

@@ -16,6 +16,7 @@ import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.yaunix.test.sadp.ParseStarterProjectActivity;
 import com.yaunix.test.sadp.top;
@@ -51,25 +52,6 @@ public class CourseListActivity extends FragmentActivity implements OnPageChange
 		CourseListFragmentPagerAdapter pagerAdapter = new CourseListFragmentPagerAdapter(getSupportFragmentManager());
 		viewPager.setOnPageChangeListener(this);
 		viewPager.setAdapter(pagerAdapter);
-		
-		Button button1 = (Button) findViewById(R.id.button1);
-		Button button2 = (Button) findViewById(R.id.button2);
-		
-		button1.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent(CourseListActivity.this, top.class);
-				startActivity(intent);
-				}
-			});
-		
-		button2.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent(CourseListActivity.this, TimeTableActivity.class);
-				startActivity(intent);
-				}
-			});
 	}
 	
 	@Override
