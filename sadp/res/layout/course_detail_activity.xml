@@ -6,7 +6,7 @@
     
     <fragment
         android:id="@+id/courseDetailFragment"
-        android:name="com.parse.starter.courses.CourseDetailFragment"
+        android:name="com.yaunix.test.sadp.courses.CourseDetailFragment"
         android:layout_width="match_parent"
         android:layout_height="460sp" 
         />
