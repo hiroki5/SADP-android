@@ -6,10 +6,7 @@ import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.LinearLayout;
 import android.widget.RatingBar;
-import android.widget.TextView;
 
 import com.fima.cardsui.objects.Card;
 import com.parse.ParseObject;
