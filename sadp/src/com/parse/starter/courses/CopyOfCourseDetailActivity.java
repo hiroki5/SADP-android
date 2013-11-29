@@ -12,13 +12,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-public class CourseDetailActivity extends FragmentActivity {
+public class CopyOfCourseDetailActivity extends FragmentActivity {
 	public static final String ARG_COURSE_ID = "ArgCourseId";
 	
 	@Override
 	protected void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
-		setContentView(R.layout.course_detail_activity);
+		setContentView(R.layout.course_detail_activity2);
 		
 		Button button1 = (Button) findViewById(R.id.button1);
 		Button button2 = (Button) findViewById(R.id.button2);
@@ -27,7 +27,7 @@ public class CourseDetailActivity extends FragmentActivity {
 		button1.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(CourseDetailActivity.this, top.class);
+				Intent intent = new Intent(CopyOfCourseDetailActivity.this, top.class);
 				startActivity(intent);
 				}
 			});
@@ -35,7 +35,7 @@ public class CourseDetailActivity extends FragmentActivity {
 		button2.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(CourseDetailActivity.this, TimeTableActivity.class);
+				Intent intent = new Intent(CopyOfCourseDetailActivity.this, TimeTableActivity.class);
 				startActivity(intent);
 				}
 			});
@@ -43,7 +43,7 @@ public class CourseDetailActivity extends FragmentActivity {
 		button3.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(CourseDetailActivity.this, CourseListActivity.class);
+				Intent intent = new Intent(CopyOfCourseDetailActivity.this, CourseListActivity.class);
 				startActivity(intent);
 				}
 			});
@@ -52,12 +52,9 @@ public class CourseDetailActivity extends FragmentActivity {
 		actionBar.setDisplayHomeAsUpEnabled(true);
 		
 		String courseId = getIntent().getStringExtra(ARG_COURSE_ID);
-		CourseDetailFragment fragment = (CourseDetailFragment) getSupportFragmentManager().findFragmentById(R.id.courseDetailFragment);
+		CopyOfCourseDetailFragment fragment = (CopyOfCourseDetailFragment) getSupportFragmentManager().findFragmentById(R.id.courseDetailFragment);
 		
 		fragment.setCourseId(courseId);
-		
-		
-		
 	}
 	
 	@Override

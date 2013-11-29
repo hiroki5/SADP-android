@@ -3,15 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
-    <fragment
-        android:id="@+id/courseDetailFragment"
-        android:name="com.parse.starter.courses.CourseDetailFragment"
-        android:layout_width="match_parent"
-        android:layout_height="460sp" 
-        />
-        
-     <LinearLayout
+	<fragment android:name="com.parse.starter.courses.CopyOfCourseDetailFragment"
+            android:id="@+id/courseDetailFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+            
+    <LinearLayout
         android:id="@+id/listView1"
         android:layout_width="match_parent"
         android:layout_height="0dip"
@@ -25,9 +22,7 @@
 		    android:layout_height="match_parent" />
 		     
     </LinearLayout>
-
-
-
+    
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="fill_parent"
@@ -68,7 +63,5 @@
             />
         
     </LinearLayout>
-    
-    
     
 </LinearLayout>

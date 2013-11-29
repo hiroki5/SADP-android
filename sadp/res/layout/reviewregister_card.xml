@@ -17,12 +17,15 @@
     	android:orientation="vertical"
     	android:visibility="gone"
         >
+        <!--
 	    <TextView 
 	        android:text="@string/this_course_is_not_registered"
             style="@style/CardText"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        />
+	        -->
+	    <!--    
 	    <Button 
 	        android:id="@+id/registerCourseButton"
 	        android:text="@string/add_this_course"
@@ -30,8 +33,35 @@
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        />
+	   -->
+	        
+	   <RatingBar
+        android:id="@+id/ratingBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />   
+        
+       <EditText
+        android:id="@+id/edittext1"
+        android:layout_marginBottom="10.0sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" /> 
+        
+       <Button 
+	    android:id="@+id/button1"
+        style="@style/CardText"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" />
+	    
+	   <TextView
+        android:id="@+id/textView2"
+        android:textSize="15sp"
+        style="@style/CardText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 	        
     </LinearLayout>
+    
+    
     <LinearLayout 
         android:id="@+id/layoutRegistered"
     	android:layout_width="match_parent"
@@ -45,6 +75,7 @@
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        />
+	        
 	    <Button 
 	        android:id="@+id/unRegisterCourseButton"
 	        android:text="@string/remove_this_course"
@@ -53,5 +84,7 @@
 	        android:layout_height="wrap_content"
 	        />
     </LinearLayout>
-
+    
+    
+    
 </LinearLayout>
